@@ -75,14 +75,18 @@ export function renderOurTeamPage(): string {
 
         <!-- Memorial Tribute -->
         <div class="memorial-card">
-          <div style="font-size: 2rem; margin-bottom: 8px;">🕊️</div>
-          <h3>${teamData.memorial.title}</h3>
-          <p style="color: var(--ocean-blue); font-weight: 700; font-size: 1.05rem; margin-bottom: 6px;">
-            ${teamData.memorial.program} — ${teamData.memorial.role}
-          </p>
-          <p style="color: var(--text-body); max-width: 720px; margin: 16px auto 0; font-style: italic; line-height: 1.8;">
-            ${teamData.memorial.description}
-          </p>
+          <div class="memorial-img-wrap">
+            <img src="${teamData.memorial.img}" alt="${teamData.memorial.name}" loading="lazy" />
+          </div>
+          <div class="memorial-content">
+            <h3>${teamData.memorial.title}</h3>
+            <p class="memorial-role">
+              ${teamData.memorial.program} — ${teamData.memorial.role}
+            </p>
+            <p class="memorial-description">
+              ${teamData.memorial.description}
+            </p>
+          </div>
         </div>
       </div>
     </section>

@@ -166,173 +166,67 @@ export const homeData = {
 export const teamData = {
   executives: [
   {
-    "name": "David Manhart",
-    "role": "President",
-    "program": "BASc Electrical Engineering",
-    "img": "/images/David_20Manhart_JPG_df2aafe9fb.jpg"
-  },
-  {
-    "name": "Cole Robulack",
-    "role": "VP Finance",
-    "program": "BASc Electrical Engineering",
-    "img": "/images/IMG_0100_55c8bcb555.jpg"
-  },
-  {
-    "name": "Alexis Wong",
-    "role": "VP Management",
-    "program": "BA Psychology",
-    "img": "/images/Alexis_20Wong_JPG_036cf7cc5f.jpg"
-  },
-  {
-    "name": "Samuel Yoskovitz",
-    "role": "AUV Technical Co-Director",
-    "program": "BASc Mechanical Engineering",
-    "img": "/images/Samuel_20Yoskovitz_JPG_0b5c3e8a33.jpg"
-  },
-  {
     "name": "Mateo Bravo",
     "role": "Hydrofoil Technical Director",
     "program": "BASc Mechanical Engineering",
     "img": "/images/Mateo_20Bravo_JPG_1196ffeecd.jpg"
-  }
-],
-  management: [
+  },
   {
-    "name": "Hana Kono",
-    "role": "Operations Lead",
-    "program": "BMgt Management",
-    "img": "/images/Sophia_20Moss_edited_021a0e34a1.jpg"
+    "name": "Antoine Godin",
+    "role": "VP Finance",
+    "program": "BASc Electrical Engineering",
+    "img": ""
   },
   {
     "name": "Kezia Wong",
-    "role": "Sponsorship Coordinator",
-    "program": "BASc Engineering",
-    "img": "/images/Cheyenne_20Gawley_JPG_5409e59ef6.jpg"
+    "role": "VP Management",
+    "program": "BA Psychology",
+    "img": ""
   },
   {
-    "name": "Taylor Knight",
-    "role": "Marketing & Outreach",
-    "program": "BCom Management",
-    "img": "/images/Bella_20Mendoza_edited_e5e7c69554.jpg"
+    "name": "Samuel Yoskovitz",
+    "role": "AUV Technical Director",
+    "program": "BASc Mechanical Engineering",
+    "img": "/images/Samuel_20Yoskovitz_JPG_0b5c3e8a33.jpg"
   },
-  {
-    "name": "Kamin Tangsujaritvichitr",
-    "role": "Finance Associate",
-    "program": "BASc Computer Engineering",
-    "img": "/images/Elliott_20Friedland_JPG_5ba5ef84b1.jpg"
+    {
+    "name": "Lina Naleto",
+    "role": "Hydrofoil Technical Director",
+    "program": "BASc Mechanical Engineering",
+    "img": ""
   }
+],
+  management: [
+
 ],
   subteamLeads: [
   {
-    "name": "Elliott Friedland",
-    "role": "Mechanical Co-Lead",
+    "name": "Leith Ross",
+    "role": "Mechanical Lead",
     "program": "BASc Mechanical Engineering",
-    "img": "/images/Elliott_20Friedland_JPG_5ba5ef84b1.jpg"
+    "img": ""
   },
   {
-    "name": "Hasan Mohammad",
-    "role": "Electrical Co-Lead",
+    "name": "Uplove Parhar",
+    "role": "Mechanical Lead",
     "program": "BASc Electrical Engineering",
-    "img": "/images/Hasan_20Mohammad_edited_6387ed2e30.jpg"
+    "img": ""
   },
   {
-    "name": "Graeme Bradford",
-    "role": "Electrical Lead",
-    "program": "BASc Electrical Engineering",
-    "img": "/images/Graeme_20Bradford_JPG_047f16708f.jpg"
-  },
-  {
-    "name": "David Straehl",
-    "role": "Hardware & Embeddings",
-    "program": "BASc Electrical Engineering",
-    "img": "/images/David_20Straehl_JPG_5f457800ba.jpg"
-  },
-  {
-    "name": "Ethan Perez",
-    "role": "Manufacturing & Materials",
-    "program": "BASc Mechanical Engineering",
-    "img": "/images/Ethan_20Perez_JPG_cd526a09e4.jpg"
-  },
-  {
-    "name": "John Mabbayad",
-    "role": "Mechanical Structures",
-    "program": "BASc Mechanical Engineering",
-    "img": "/images/John_20Mabbayad_edited_3485edf905.jpg"
-  },
-  {
-    "name": "Sophia Moss",
-    "role": "Outreach Coordinator",
-    "program": "BSc Computer Science",
-    "img": "/images/Sophia_20Moss_edited_021a0e34a1.jpg"
-  },
-  {
-    "name": "Kurt Galanto",
+    "name": "Amber Hawker",
     "role": "Software Lead",
     "program": "BSc Computer Science",
-    "img": "/images/Kurt_20Galanto_JPG_2e7aab9c4a.jpg"
+    "img": ""
   },
-  {
-    "name": "Hammad Tariq",
-    "role": "Software & Controls",
-    "program": "BSc Computer Science",
-    "img": "/images/Hammad_20Tariq_JPG_c6c54d1710.jpg"
-  },
-  {
-    "name": "Arsh Mehta",
-    "role": "Computer Vision Lead",
-    "program": "BASc Electrical Engineering",
-    "img": "/images/Arsh_20Mehta_JPG_aaff7b2a7c.jpg"
-  },
-  {
-    "name": "Rhea Deshpande",
-    "role": "Power Systems Lead",
-    "program": "BASc Electrical Engineering",
-    "img": "/images/Rhea_20Deshpande_JPG_5cec28b298.jpg"
-  },
-  {
-    "name": "Aditya Patel",
-    "role": "Autonomous Navigation",
-    "program": "BSc Computer Science",
-    "img": "/images/Aditya_20Patel_edited_f42fe195e4.jpg"
-  },
-  {
-    "name": "Bella Mendoza",
-    "role": "Mechanical Systems",
-    "program": "BASc Mechanical Engineering",
-    "img": "/images/Bella_20Mendoza_edited_e5e7c69554.jpg"
-  },
-  {
-    "name": "Max Landgraff",
-    "role": "Electronics Assembly",
-    "program": "BASc Electrical Engineering",
-    "img": "/images/Max_20Landgraff_edited_337ca7090f.jpg"
-  },
-  {
-    "name": "Ethan Kleinikkink",
-    "role": "Actuators & Pneumatics",
-    "program": "BASc Mechanical Engineering",
-    "img": "/images/Ethan_20Kleinikkink_JPG_d1ea16981f.jpg"
-  },
-  {
-    "name": "Chigoziri Okpanku",
-    "role": "Software Infrastructure",
-    "program": "BSc Computer Science",
-    "img": "/images/Chigoziri_20Okpanku_edited_1aa7f1bfcd.jpg"
-  },
-  {
-    "name": "Jia Yi Lu",
-    "role": "Acoustic Localization",
-    "program": "BSc Computer Science",
-    "img": "/images/Jia_20Yi_20Lu_edited_9576b997a0.jpg"
-  }
 ],
   memorial: {
-  "name": "Caleb Dornian",
-  "title": "In Loving Memory of Caleb Dornian",
-  "role": "Pelican Computer Case Lead",
-  "program": "BASc Electrical Engineering",
-  "description": "Honoring our teammate and friend Caleb Dornian, whose dedication, kindness, and engineering ingenuity left an indelible mark on Okanagan Marine Robotics."
-}
+    "name": "Caleb Dornian",
+    "title": "In Loving Memory of Caleb Dornian",
+    "role": "Pelican Computer Case Lead",
+    "program": "BASc Electrical Engineering",
+    "img": "/images/calebdornian.avif",
+    "description": "Honoring our teammate and friend Caleb Dornian, whose dedication, kindness, and engineering ingenuity left an indelible mark on Okanagan Marine Robotics."
+  }
 };
 
 export const journeyTimeline = [
