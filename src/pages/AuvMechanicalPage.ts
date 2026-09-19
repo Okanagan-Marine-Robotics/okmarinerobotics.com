@@ -42,34 +42,34 @@ export function renderAuvMechanicalPage(): string {
   ];
 
   return `
-    <section class="section" style="padding-top: 60px;">
+    <section class="section" style="padding-top: 50px; background: var(--bg-page);">
       <div class="container">
         <div class="section-header">
           <span class="badge">AUV Subsystems</span>
-          <h1 class="section-title text-gradient">AUV Mechanical Engineering</h1>
+          <h1 class="section-title">AUV Mechanical Engineering</h1>
           <p class="section-subtitle">Chassis structures, pressure hulls, dynamic seals, and precision subsea manipulators.</p>
         </div>
 
         <!-- Team Banner -->
-        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 70px;">
+        <div class="card" style="padding: 0; overflow: hidden; margin-bottom: 50px;">
           <img src="${teamPhoto}" alt="AUV Mechanical Subteam" style="width: 100%; max-height: 460px; object-fit: cover;" />
           <div style="padding: 24px 32px;">
-            <h3 style="font-size: 1.3rem; margin-bottom: 8px;">AUV Mechanical Subteam</h3>
-            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">${subteamMembers}</p>
+            <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 8px; text-transform: uppercase;">AUV Mechanical Subteam</h3>
+            <p style="color: var(--text-body); font-size: 0.98rem; line-height: 1.6;">${subteamMembers}</p>
           </div>
         </div>
 
         <!-- Mechanical Modules -->
-        <div style="display: flex; flex-direction: column; gap: 60px;">
+        <div style="display: flex; flex-direction: column; gap: 40px;">
           ${modules.map((m, idx) => `
-            <div class="glass-card" style="display: grid; grid-template-columns: ${idx % 2 === 0 ? '1fr 1.2fr' : '1.2fr 1fr'}; gap: 40px; align-items: center;">
-              <div style="order: ${idx % 2 === 0 ? 1 : 2}; background: #061220; border-radius: var(--radius-md); padding: 20px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-color);">
+            <div class="card" style="display: grid; grid-template-columns: ${idx % 2 === 0 ? '1fr 1.2fr' : '1.2fr 1fr'}; gap: 36px; align-items: center;">
+              <div style="order: ${idx % 2 === 0 ? 1 : 2}; background: #F8FAFC; border-radius: var(--radius-md); padding: 20px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-color);">
                 <img src="${m.img}" alt="${m.title}" style="max-height: 280px; object-fit: contain;" />
               </div>
               <div style="order: ${idx % 2 === 0 ? 2 : 1};">
                 <span class="badge" style="margin-bottom: 12px;">${m.badge}</span>
-                <h2 style="font-size: 2rem; margin-bottom: 16px;">${m.title}</h2>
-                <p style="color: #CBD5E1; font-size: 1.05rem; line-height: 1.8;">${m.desc}</p>
+                <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 14px; text-transform: uppercase;">${m.title}</h2>
+                <p style="color: var(--text-body); font-size: 1.05rem; line-height: 1.8;">${m.desc}</p>
               </div>
             </div>
           `).join('')}

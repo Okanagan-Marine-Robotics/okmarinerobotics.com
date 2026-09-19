@@ -2,20 +2,17 @@ import { sponsorsData } from '../data/siteData';
 
 export function renderSponsorsPage(): string {
   return `
-    <section class="section" style="padding-top: 60px;">
+    <section class="section" style="padding-top: 50px; background: var(--bg-page);">
       <div class="container">
         <div class="section-header">
           <span class="badge">Our Backers</span>
-          <h1 class="section-title text-gradient">Our Sponsors</h1>
+          <h1 class="section-title">Our Sponsors</h1>
           <p class="section-subtitle">We are immensely grateful to the organizations, companies, and grants powering our subsea robotics innovation.</p>
         </div>
 
         <!-- Platinum -->
-        <h2 class="sponsor-tier-title" style="color: #E2E8F0;">
-          <span style="display:inline-block; width: 14px; height: 14px; background: #E2E8F0; border-radius: 50%; box-shadow: 0 0 10px #E2E8F0;"></span>
-          Platinum Sponsors
-        </h2>
-        <div class="sponsors-grid" style="margin-bottom: 50px;">
+        <h2 class="sponsor-tier-title">Platinum Sponsors</h2>
+        <div class="sponsors-grid" style="margin-bottom: 40px;">
           ${sponsorsData.platinum.map(s => `
             <div class="sponsor-card">
               <img src="${s.logo}" alt="${s.name}" loading="lazy" />
@@ -24,11 +21,8 @@ export function renderSponsorsPage(): string {
         </div>
 
         <!-- Gold -->
-        <h2 class="sponsor-tier-title" style="color: #FFD700;">
-          <span style="display:inline-block; width: 14px; height: 14px; background: #FFD700; border-radius: 50%; box-shadow: 0 0 10px #FFD700;"></span>
-          Gold Sponsors
-        </h2>
-        <div class="sponsors-grid" style="margin-bottom: 50px;">
+        <h2 class="sponsor-tier-title">Gold Sponsors</h2>
+        <div class="sponsors-grid" style="margin-bottom: 40px;">
           ${sponsorsData.gold.map(s => `
             <div class="sponsor-card">
               <img src="${s.logo}" alt="${s.name}" loading="lazy" />
@@ -37,11 +31,8 @@ export function renderSponsorsPage(): string {
         </div>
 
         <!-- Silver -->
-        <h2 class="sponsor-tier-title" style="color: #CBD5E1;">
-          <span style="display:inline-block; width: 14px; height: 14px; background: #CBD5E1; border-radius: 50%;"></span>
-          Silver Sponsors
-        </h2>
-        <div class="sponsors-grid" style="margin-bottom: 50px;">
+        <h2 class="sponsor-tier-title">Silver Sponsors</h2>
+        <div class="sponsors-grid" style="margin-bottom: 40px;">
           ${sponsorsData.silver.map(s => `
             <div class="sponsor-card">
               <img src="${s.logo}" alt="${s.name}" loading="lazy" />
@@ -50,11 +41,8 @@ export function renderSponsorsPage(): string {
         </div>
 
         <!-- Bronze -->
-        <h2 class="sponsor-tier-title" style="color: #CD7F32;">
-          <span style="display:inline-block; width: 14px; height: 14px; background: #CD7F32; border-radius: 50%;"></span>
-          Bronze Sponsors
-        </h2>
-        <div class="sponsors-grid" style="margin-bottom: 50px;">
+        <h2 class="sponsor-tier-title">Bronze Sponsors</h2>
+        <div class="sponsors-grid" style="margin-bottom: 40px;">
           ${sponsorsData.bronze.map(s => `
             <div class="sponsor-card">
               <img src="${s.logo}" alt="${s.name}" loading="lazy" />
@@ -63,11 +51,8 @@ export function renderSponsorsPage(): string {
         </div>
 
         <!-- Software -->
-        <h2 class="sponsor-tier-title" style="color: var(--accent-cyan);">
-          <span style="display:inline-block; width: 14px; height: 14px; background: var(--accent-cyan); border-radius: 50%; box-shadow: 0 0 10px var(--accent-cyan);"></span>
-          Software Sponsor
-        </h2>
-        <div class="sponsors-grid">
+        <h2 class="sponsor-tier-title">Software Sponsor</h2>
+        <div class="sponsors-grid" style="margin-bottom: 50px;">
           ${sponsorsData.software.map(s => `
             <div class="sponsor-card">
               <img src="${s.logo}" alt="${s.name}" loading="lazy" />
@@ -75,15 +60,18 @@ export function renderSponsorsPage(): string {
           `).join('')}
         </div>
 
-        <div style="text-align: center; margin-top: 70px; background: var(--bg-card); border-radius: var(--radius-lg); padding: 40px; border: 1px solid var(--border-color);">
-          <h2 style="font-size: 1.8rem; margin-bottom: 14px;">Interested in Partnering With Us?</h2>
-          <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 28px;">
+        <div class="card" style="text-align: center; max-width: 820px; margin: 0 auto; padding: 40px;">
+          <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 12px; text-transform: uppercase;">
+            Interested in Partnering With Us?
+          </h2>
+          <p style="color: var(--text-body); max-width: 600px; margin: 0 auto 24px; font-size: 1.05rem;">
             Join world-class subsea engineering brands and support university robotics education while accessing top technical talent.
           </p>
-          <a href="/sponsorships" class="btn btn-primary" data-nav>
-            View Sponsorship Tier Deck
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+          <div>
+            <a href="/sponsorships" class="btn btn-primary" data-nav>
+              View Sponsorship Tier Deck
+            </a>
+          </div>
         </div>
       </div>
     </section>

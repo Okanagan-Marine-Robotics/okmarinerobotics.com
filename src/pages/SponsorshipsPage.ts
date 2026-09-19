@@ -9,15 +9,15 @@ export function renderSponsorshipsPage(): string {
   ];
 
   return `
-    <section class="section" style="padding-top: 60px;">
+    <section class="section" style="padding-top: 50px; background: var(--bg-page);">
       <div class="container">
         <div class="section-header">
           <span class="badge">Partner With Us</span>
-          <h1 class="section-title text-gradient">Sponsorship Opportunities</h1>
+          <h1 class="section-title">Sponsorship Opportunities</h1>
           <p class="section-subtitle">Invest in future subsea technology leaders and put your brand on the global stage at RoboSub.</p>
         </div>
 
-        <div style="display: flex; justify-content: center; gap: 16px; margin-bottom: 50px; flex-wrap: wrap;">
+        <div style="display: flex; justify-content: center; gap: 16px; margin-bottom: 40px; flex-wrap: wrap;">
           <a href="/docs/Sponsorship-Package.pdf" target="_blank" class="btn btn-primary">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
             Download Sponsorship Package (PDF)
@@ -28,18 +28,18 @@ export function renderSponsorshipsPage(): string {
         </div>
 
         <!-- Tiers Grid -->
-        <div class="card-grid" style="margin-bottom: 70px;">
+        <div class="card-grid" style="margin-bottom: 60px;">
           ${tiers.map(t => `
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
               <div>
                 <span class="badge" style="margin-bottom: 12px;">${t.name}</span>
-                <div style="font-size: 2.2rem; font-weight: 900; color: var(--accent-cyan); font-family: var(--font-heading); margin-bottom: 18px;">
+                <div style="font-size: 2.2rem; font-weight: 900; color: var(--ocean-blue); font-family: var(--font-heading); margin-bottom: 16px;">
                   ${t.amount}
                 </div>
-                <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px;">
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px;">
                   ${t.perks.map(p => `
-                    <li style="display: flex; align-items: flex-start; gap: 10px; color: #CBD5E1; font-size: 0.95rem;">
-                      <span style="color: var(--accent-cyan); font-weight: bold;">✓</span>
+                    <li style="display: flex; align-items: flex-start; gap: 8px; color: var(--text-body); font-size: 0.95rem;">
+                      <span style="color: var(--ocean-blue); font-weight: bold;">✓</span>
                       <span>${p}</span>
                     </li>
                   `).join('')}
@@ -53,17 +53,19 @@ export function renderSponsorshipsPage(): string {
         </div>
 
         <!-- Sponsor Spotlights -->
-        <h2 style="font-size: 2rem; margin-bottom: 24px; text-align: center;">Featured Partner Spotlights</h2>
-        <div style="display: flex; flex-direction: column; gap: 24px; margin-bottom: 60px;">
+        <h2 style="font-size: 2rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 24px; text-align: center; text-transform: uppercase;">
+          Featured Partner Spotlights
+        </h2>
+        <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 50px;">
           ${[...sponsorsData.platinum, ...sponsorsData.gold].map(s => `
-            <div class="glass-card" style="display: grid; grid-template-columns: 220px 1fr; gap: 30px; align-items: center; padding: 24px;">
-              <div class="sponsor-card" style="min-height: 120px;">
+            <div class="card" style="display: grid; grid-template-columns: 220px 1fr; gap: 28px; align-items: center; padding: 24px;">
+              <div class="sponsor-card" style="min-height: 110px;">
                 <img src="${s.logo}" alt="${s.name}" loading="lazy" />
               </div>
               <div>
-                <div style="color: var(--accent-cyan); font-size: 0.85rem; font-weight: 600; text-transform: uppercase;">${s.tier}</div>
-                <h3 style="font-size: 1.5rem; margin: 4px 0 10px;">${s.name}</h3>
-                <p style="color: var(--text-muted); line-height: 1.7;">${s.desc || 'Valued industry partner supporting student marine engineering and innovation.'}</p>
+                <div style="color: var(--ocean-blue); font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">${s.tier}</div>
+                <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--navy-deep); margin: 4px 0 8px; text-transform: uppercase;">${s.name}</h3>
+                <p style="color: var(--text-body); line-height: 1.6;">${s.desc || 'Valued industry partner supporting student marine engineering and innovation.'}</p>
               </div>
             </div>
           `).join('')}

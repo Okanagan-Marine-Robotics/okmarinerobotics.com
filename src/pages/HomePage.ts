@@ -9,102 +9,162 @@ export function renderHomePage(): string {
   ];
 
   return `
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section class="hero">
       <div class="hero-bg" style="background-image: url('${siteConfig.heroImage}');"></div>
       <div class="hero-overlay"></div>
       <div class="container">
         <div class="hero-content">
-          <div class="badge" style="margin-bottom: 14px;">
-            <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-cyan);"></span>
-            ${homeData.hero.badge}
-          </div>
-          <h1 class="hero-title text-gradient">${homeData.hero.title}</h1>
+          <div class="hero-subheading">WELCOME TO</div>
+          <h1 class="hero-title">OKANAGAN<br>MARINE ROBOTICS</h1>
           <p class="hero-lead">${homeData.hero.lead}</p>
           <div class="hero-actions">
-            <a href="${homeData.hero.ctaPrimary.path}" class="btn btn-primary" data-nav>
-              ${homeData.hero.ctaPrimary.label}
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-            <a href="${homeData.hero.ctaSecondary.path}" class="btn btn-secondary" data-nav>
-              ${homeData.hero.ctaSecondary.label}
-            </a>
+            <a href="/our-journey" class="btn btn-primary" data-nav>Our Journey</a>
+            <a href="/our-team" class="btn btn-secondary-dark" data-nav>Our Team</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Stats -->
+    <!-- Our Year in Numbers -->
     <section class="stats-section">
       <div class="container">
+        <h2 class="stats-title">Our Year in Numbers</h2>
         <div class="stats-grid">
-          ${homeData.stats.map(s => `
-            <div class="stat-card">
-              <div class="stat-value">${s.value}</div>
-              <div class="stat-label">${s.label}</div>
-            </div>
-          `).join('')}
+          <div class="stat-card">
+            <div class="stat-value">$59,000</div>
+            <div class="stat-label">in Funding Acquired</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">11th</div>
+            <div class="stat-label">Place Overall in RoboSub 2025 out of 58 teams</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">2nd</div>
+            <div class="stat-label">Ranked Team in Canada</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">80+</div>
+            <div class="stat-label">Total Team Members</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Why Us -->
-    <section class="section">
+    <!-- Why Us? Section -->
+    <section class="section section-white">
       <div class="container">
-        <div class="section-header">
-          <span class="badge">Innovation at Depth</span>
-          <h2 class="section-title">Why Okanagan Marine Robotics?</h2>
-          <p class="section-subtitle">The fastest growing engineering design team at UBC Okanagan, pushing the boundaries of autonomous subsea technology.</p>
+        <div style="margin-bottom: 40px; text-align: center;">
+          <h2 style="font-family: var(--font-heading); font-size: clamp(2.4rem, 4.5vw, 3.4rem); font-weight: 900; color: var(--ocean-blue); text-transform: uppercase; margin-bottom: 6px;">
+            WHY US?
+            <span style="font-weight: 500; font-style: italic; font-size: clamp(1.1rem, 2vw, 1.5rem); text-transform: none; margin-left: 10px; color: var(--ocean-accent);">
+              Why should you join Okanagan Marine Robotics?
+            </span>
+          </h2>
         </div>
-        <div class="card-grid">
-          ${homeData.whyUs.map((w, idx) => `
-            <div class="glass-card">
-              <div style="font-family: var(--font-mono); font-size: 1.2rem; color: var(--accent-cyan); font-weight: 700; margin-bottom: 12px;">
-                0${idx + 1}.
-              </div>
-              <h3 style="font-size: 1.4rem; margin-bottom: 12px;">${w.title}</h3>
-              <p style="color: var(--text-muted);">${w.desc}</p>
+
+        <div class="why-us-grid">
+          <div class="why-us-row">
+            <div class="why-us-title-wrap">
+              <span class="why-us-icon">⚙️</span>
+              <span class="why-us-title">INNOVATIVE CLUB</span>
             </div>
-          `).join('')}
+            <div class="why-us-desc">
+              The fastest growing and most innovative engineering design team at UBC Okanagan; the only team working on Autonomous Technology within robotics.
+            </div>
+          </div>
+
+          <div class="why-us-row">
+            <div class="why-us-title-wrap">
+              <span class="why-us-icon">🌐</span>
+              <span class="why-us-title">LATEST TECHNOLOGY</span>
+            </div>
+            <div class="why-us-desc">
+              Join us in developing advanced technology, from PCB design and Machine Learning algorithms to Hydro-Dynamic panels, as we tackle exciting challenges and push the frontiers of engineering.
+            </div>
+          </div>
+
+          <div class="why-us-row">
+            <div class="why-us-title-wrap">
+              <span class="why-us-icon">⭐</span>
+              <span class="why-us-title">PASSION</span>
+            </div>
+            <div class="why-us-desc">
+              Our team is fueled by a deep passion for cutting-edge technology and a culture of collaboration. Every member contributes to our shared vision of innovation, and we're always eager to welcome like-minded individuals ready to push the limits with us.
+            </div>
+          </div>
+
+          <div class="why-us-row">
+            <div class="why-us-title-wrap">
+              <span class="why-us-icon">⚡</span>
+              <span class="why-us-title">RESOURCES</span>
+            </div>
+            <div class="why-us-desc">
+              With access to cutting-edge equipment, mentorship, and funding, our team is empowered to innovate and grow. We're continuously seeking new sponsors to help expand our vision and capabilities.
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section class="section" style="background: rgba(11, 30, 52, 0.4); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <!-- Current Projects (Deep Marine Section) -->
+    <section class="section" style="background: var(--navy-section); color: #FFFFFF;">
       <div class="container">
-        <div class="section-header">
-          <span class="badge">Flagship Systems</span>
-          <h2 class="section-title">Current Projects</h2>
-          <p class="section-subtitle">Our interdisciplinary subteams engineer competitive subsea autonomous robotics and hydrodynamic craft from the ground up.</p>
-        </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 32px;">
-          ${homeData.projects.map(p => `
-            <div class="project-card">
-              <div class="project-img-wrap">
-                <img src="${p.image}" alt="${p.title}" loading="lazy" />
+        <h2 style="font-family: var(--font-heading); font-size: clamp(2.2rem, 4vw, 3rem); font-weight: 900; text-transform: uppercase; color: #FFFFFF; text-align: center; margin-bottom: 40px;">
+          Current Projects
+        </h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; max-width: 1000px; margin: 0 auto;">
+          
+          <!-- AUV Project Card -->
+          <div style="background: #FFFFFF; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); color: var(--navy-deep); text-align: center; display: flex; flex-direction: column;">
+            <div style="height: 250px; overflow: hidden; background: #E2E8F0;">
+              <img src="/images/f0621d_ad521d06bcb34a83843dba8_7125f3114c.jpg" alt="AUV Ogopogo" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div style="padding: 28px 24px; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h3 style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: var(--ocean-blue); margin-bottom: 10px; text-transform: uppercase;">
+                  AUV
+                </h3>
+                <p style="color: var(--text-body); font-size: 1.05rem; margin-bottom: 24px; line-height: 1.5;">
+                  OKMR will be attending Robosub 2026 with our AUV! Check out our process and design:
+                </p>
               </div>
-              <div class="project-body">
-                <div>
-                  <h3 class="project-title">${p.title}</h3>
-                  <div class="project-subtitle">${p.subtitle}</div>
-                  <p class="project-desc">${p.desc}</p>
-                </div>
-                <div>
-                  <a href="${p.link}" class="btn btn-primary" style="width: 100%;" data-nav>
-                    Explore System
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                  </a>
-                </div>
+              <div>
+                <a href="/auv" class="btn btn-primary" style="width: 80%;" data-nav>
+                  Explore AUV
+                </a>
               </div>
             </div>
-          `).join('')}
+          </div>
+
+          <!-- Hydrofoil Project Card -->
+          <div style="background: #FFFFFF; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); color: var(--navy-deep); text-align: center; display: flex; flex-direction: column;">
+            <div style="height: 250px; overflow: hidden; background: #E2E8F0;">
+              <img src="/images/11C89DD6-862A-4788-BB88-BC096E_f7ef30bc84.jpeg" alt="Hydrofoil Boat Project" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div style="padding: 28px 24px; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h3 style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: var(--ocean-blue); margin-bottom: 10px; text-transform: uppercase;">
+                  Hydrofoil
+                </h3>
+                <p style="color: var(--text-body); font-size: 1.05rem; margin-bottom: 24px; line-height: 1.5;">
+                  For the first time, OKMR is now designing a hydrofoil boat. Learn more about our process:
+                </p>
+              </div>
+              <div>
+                <a href="/hydrofoil" class="btn btn-primary" style="width: 80%;" data-nav>
+                  Explore Hydrofoil
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Sponsors Preview -->
-    <section class="section">
+    <!-- Sponsors Section -->
+    <section class="section section-white">
       <div class="container">
         <div class="section-header">
           <span class="badge">Industry Partners</span>
@@ -118,24 +178,23 @@ export function renderHomePage(): string {
             </div>
           `).join('')}
         </div>
-        <div style="text-align: center; margin-top: 40px;">
+        <div style="text-align: center; margin-top: 36px;">
           <a href="/sponsorships" class="btn btn-secondary" data-nav>
             Become a Sponsor & View Tier Deck
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Support Us / Donations -->
-    <section class="section" style="background: linear-gradient(135deg, rgba(0, 153, 255, 0.1), rgba(0, 210, 255, 0.04)); border-top: 1px solid var(--border-glow); border-bottom: 1px solid var(--border-glow);">
+    <!-- Support Our Mission -->
+    <section class="section" style="background: var(--ocean-tint); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
       <div class="container" style="text-align: center; max-width: 860px;">
-        <span class="badge" style="margin-bottom: 16px;">Tax-Deductible Contributions</span>
+        <span class="badge" style="margin-bottom: 14px;">Tax-Deductible Contributions</span>
         <h2 class="section-title">Support Our Mission</h2>
-        <p style="color: #CBD5E1; font-size: 1.15rem; margin-bottom: 30px; line-height: 1.7;">
-          Interested in supporting our engineering students? Any and all contributions make a huge difference in purchasing sensors, batteries, thrusters, and sending our travel team to California! Alternatively, donate through UBC Giving with our team code: <strong style="color: var(--accent-cyan); font-family: var(--font-mono);">${siteConfig.donations.code}</strong>.
+        <p style="color: var(--text-body); font-size: 1.1rem; margin-bottom: 28px; line-height: 1.7;">
+          Interested in supporting our engineering students? Any and all contributions make a huge difference in purchasing sensors, batteries, thrusters, and sending our travel team to California! Alternatively, donate through UBC Giving with our team code: <strong style="color: var(--ocean-blue);">${siteConfig.donations.code}</strong>.
         </p>
-        <div style="display: flex; justify-content: center; gap: 18px; flex-wrap: wrap;">
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
           <a href="${siteConfig.donations.individual}" target="_blank" rel="noopener" class="btn btn-primary">
             Donate as an Individual
           </a>
@@ -150,26 +209,26 @@ export function renderHomePage(): string {
     </section>
 
     <!-- Newsletters -->
-    <section class="section">
+    <section class="section section-white">
       <div class="container">
         <div class="section-header">
-          <span class="badge">Publications & Reports</span>
-          <h2 class="section-title">Team Newsletters & Competition Summaries</h2>
-          <p class="section-subtitle">Catch up on our design reviews, competition recaps, and term progress reports.</p>
+          <span class="badge">Publications</span>
+          <h2 class="section-title">Team Newsletters</h2>
+          <p class="section-subtitle">Catch up on our latest build milestones, competition recaps, and subteam accomplishments.</p>
         </div>
         <div class="card-grid">
           ${homeData.newsletters.map(n => `
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="card" style="align-items: flex-start; justify-content: space-between;">
               <div>
-                <div style="display: flex; align-items: center; gap: 10px; color: var(--accent-cyan); margin-bottom: 12px;">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                  <span style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">PDF Document</span>
-                </div>
-                <h3 style="font-size: 1.3rem; margin-bottom: 16px;">${n.title}</h3>
+                <span class="badge" style="margin-bottom: 12px;">PDF Publication</span>
+                <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 8px;">${n.title}</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">
+                  Official team newsletter publication. Free to read and download.
+                </p>
               </div>
               <a href="${n.file}" target="_blank" class="btn btn-secondary" style="width: 100%;">
-                Read Report (PDF)
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                Download PDF
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
               </a>
             </div>
           `).join('')}
@@ -178,22 +237,22 @@ export function renderHomePage(): string {
     </section>
 
     <!-- FAQs -->
-    <section class="section" style="background: rgba(11, 30, 52, 0.3); border-top: 1px solid var(--border-color);">
+    <section class="section" style="background: var(--bg-page);">
       <div class="container">
         <div class="section-header">
-          <span class="badge">Got Questions?</span>
+          <span class="badge">FAQ</span>
           <h2 class="section-title">Frequently Asked Questions</h2>
-          <p class="section-subtitle">Everything you need to know about joining Okanagan Marine Robotics.</p>
+          <p class="section-subtitle">Common questions about joining Okanagan Marine Robotics, recruitment cycles, and team expectations.</p>
         </div>
         <div class="faq-list">
-          ${homeData.faqs.map((f, i) => `
-            <div class="faq-item ${i === 0 ? 'open' : ''}">
-              <button class="faq-question" aria-expanded="${i === 0 ? 'true' : 'false'}">
-                <span>${f.q}</span>
+          ${homeData.faqs.map(faq => `
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>${faq.q}</span>
                 <span class="faq-icon">+</span>
               </button>
               <div class="faq-answer">
-                ${f.a}
+                <p>${faq.a}</p>
               </div>
             </div>
           `).join('')}

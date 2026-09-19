@@ -7,13 +7,16 @@ export function renderFooter(): string {
         <div class="footer-top">
           <div class="footer-brand">
             <div class="brand-logo" style="margin-bottom: 12px;">
-              <img src="${siteConfig.logo}" alt="${siteConfig.name} Logo" width="42" height="42" />
+              <img src="${siteConfig.logo}" alt="${siteConfig.name} Logo" width="46" height="46" />
               <div>
                 <div class="brand-name">OKANAGAN MARINE ROBOTICS</div>
                 <div class="brand-sub">${siteConfig.institution}</div>
               </div>
             </div>
             <p>${siteConfig.tagline}</p>
+            <div style="font-size: 0.9rem; color: #A9D6E5; margin-bottom: 16px;">
+              📍 ${siteConfig.address}
+            </div>
             <div class="social-links">
               <a href="${siteConfig.socials.instagram}" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
@@ -38,15 +41,16 @@ export function renderFooter(): string {
               <li><a href="/our-journey" data-nav>Our Journey</a></li>
               <li><a href="/gallery" data-nav>Gallery</a></li>
               <li><a href="/outreach" data-nav>STEM Outreach</a></li>
+              <li><a href="/contact-us" data-nav>Contact Us</a></li>
             </ul>
           </div>
 
           <div>
             <h4 class="footer-heading">Robotics & Projects</h4>
             <ul class="footer-links">
-              <li><a href="/auv" data-nav>AUV Ogopogo</a></li>
-              <li><a href="/auv-electrical" data-nav>AUV Electrical</a></li>
+              <li><a href="/auv" data-nav>AUV Overview</a></li>
               <li><a href="/auv-mechanical" data-nav>AUV Mechanical</a></li>
+              <li><a href="/auv-electrical" data-nav>AUV Electrical</a></li>
               <li><a href="/auv-software" data-nav>AUV Software</a></li>
               <li><a href="/hydrofoil" data-nav>Hydrofoil Project</a></li>
               <li><a href="/robosub-2025" data-nav>RoboSub 2025</a></li>
@@ -54,14 +58,24 @@ export function renderFooter(): string {
           </div>
 
           <div>
-            <h4 class="footer-heading">Support & Connect</h4>
-            <ul class="footer-links">
-              <li><a href="/sponsors" data-nav>Our Sponsors</a></li>
-              <li><a href="/sponsorships" data-nav>Sponsorship Packages</a></li>
-              <li><a href="${siteConfig.donations.individual}" target="_blank" rel="noopener">Donate (Individual)</a></li>
-              <li><a href="${siteConfig.donations.corporate}" target="_blank" rel="noopener">Donate (Corporate)</a></li>
-              <li><a href="/contact-us" data-nav>Contact Us</a></li>
-              <li><a href="mailto:${siteConfig.email}">${siteConfig.email}</a></li>
+            <h4 class="footer-heading">Our Mentors</h4>
+            <ul class="footer-links" style="font-size: 0.9rem;">
+              <li>
+                <strong style="color: #FFFFFF;">Dr. Rudolf Seethaler</strong>
+                <div style="color: #94A3B8; font-size: 0.82rem;">University of British Columbia</div>
+              </li>
+              <li>
+                <strong style="color: #FFFFFF;">Grant Topor</strong>
+                <div style="color: #94A3B8; font-size: 0.82rem;">University of British Columbia</div>
+              </li>
+              <li>
+                <strong style="color: #FFFFFF;">Eric Jackson</strong>
+                <div style="color: #94A3B8; font-size: 0.82rem;">Cellula Robotics</div>
+              </li>
+              <li>
+                <strong style="color: #FFFFFF;">Tristan Crees</strong>
+                <div style="color: #94A3B8; font-size: 0.82rem;">Banksia Robotics</div>
+              </li>
             </ul>
           </div>
         </div>

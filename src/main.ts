@@ -16,6 +16,7 @@ import { renderRoboSub2024Page } from './pages/RoboSub2024Page';
 import { renderSponsorsPage } from './pages/SponsorsPage';
 import { renderSponsorshipsPage } from './pages/SponsorshipsPage';
 import { renderContactPage } from './pages/ContactPage';
+import { outreachData } from './data/siteData';
 
 const routes: Record<string, () => string> = {
   '/': renderHomePage,
@@ -113,10 +114,33 @@ function attachEventListeners() {
       const item = btn.closest('.faq-item');
       if (item) {
         const isOpen = item.classList.contains('open');
-        // close others
         document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
         if (!isOpen) item.classList.add('open');
       }
+    });
+  });
+
+  // Outreach Tabs Switcher
+  document.querySelectorAll('.outreach-tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const idx = parseInt(btn.getAttribute('data-index') || '0', 10);
+      const item = outreachData[idx];
+      if (!item) return;
+
+      document.querySelectorAll('.outreach-tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const titleEl = document.getElementById('outreachTitle');
+      const img1El = document.getElementById('outreachImg1') as HTMLImageElement;
+      const img2El = document.getElementById('outreachImg2') as HTMLImageElement;
+      const subEl = document.getElementById('outreachSubtitle');
+      const descEl = document.getElementById('outreachDesc');
+
+      if (titleEl) titleEl.textContent = item.title;
+      if (img1El) img1El.src = item.img1;
+      if (img2El) img2El.src = item.img2;
+      if (subEl) subEl.textContent = item.subtitle;
+      if (descEl) descEl.textContent = item.desc;
     });
   });
 }
@@ -144,9 +168,9 @@ function attachEventListeners() {
   const feedback = document.getElementById('formFeedback');
   if (feedback) {
     feedback.style.display = 'block';
-    feedback.style.background = 'rgba(0, 210, 255, 0.15)';
-    feedback.style.border = '1px solid var(--accent-cyan)';
-    feedback.style.color = '#fff';
+    feedback.style.background = '#EBF5FC';
+    feedback.style.border = '1.5px solid #1D5D9B';
+    feedback.style.color = '#012A4A';
     feedback.innerHTML = '<strong>Thank you!</strong> Your message has been sent to okmarinerobotics@gmail.com. We will be in touch soon.';
     (document.getElementById('contactForm') as HTMLFormElement)?.reset();
   }

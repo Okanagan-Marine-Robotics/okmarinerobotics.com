@@ -2,17 +2,17 @@ import { teamData } from '../data/siteData';
 
 export function renderOurTeamPage(): string {
   return `
-    <section class="section" style="padding-top: 60px;">
+    <section class="section" style="padding-top: 50px; background: var(--bg-page);">
       <div class="container">
         <div class="section-header">
           <span class="badge">Team Roster</span>
-          <h1 class="section-title text-gradient">Meet The Team</h1>
+          <h1 class="section-title">Meet The Team</h1>
           <p class="section-subtitle">The dedicated student engineers, computer scientists, managers, and innovators behind Okanagan Marine Robotics.</p>
         </div>
 
         <!-- Executives -->
-        <div style="margin-bottom: 70px;">
-          <h2 style="font-size: 1.8rem; margin-bottom: 28px; border-left: 4px solid var(--accent-cyan); padding-left: 14px;">
+        <div style="margin-bottom: 60px;">
+          <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 24px; border-left: 5px solid var(--ocean-blue); padding-left: 14px; text-transform: uppercase;">
             Executive Team
           </h2>
           <div class="team-grid">
@@ -32,8 +32,8 @@ export function renderOurTeamPage(): string {
         </div>
 
         <!-- Management & Operations -->
-        <div style="margin-bottom: 70px;">
-          <h2 style="font-size: 1.8rem; margin-bottom: 28px; border-left: 4px solid var(--accent-cyan); padding-left: 14px;">
+        <div style="margin-bottom: 60px;">
+          <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 24px; border-left: 5px solid var(--ocean-blue); padding-left: 14px; text-transform: uppercase;">
             Management & Operations
           </h2>
           <div class="team-grid">
@@ -53,8 +53,8 @@ export function renderOurTeamPage(): string {
         </div>
 
         <!-- Engineering Leads & Core Subteams -->
-        <div style="margin-bottom: 70px;">
-          <h2 style="font-size: 1.8rem; margin-bottom: 28px; border-left: 4px solid var(--accent-cyan); padding-left: 14px;">
+        <div style="margin-bottom: 60px;">
+          <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 24px; border-left: 5px solid var(--ocean-blue); padding-left: 14px; text-transform: uppercase;">
             Subteam Leads & Specialists
           </h2>
           <div class="team-grid">
@@ -75,12 +75,12 @@ export function renderOurTeamPage(): string {
 
         <!-- Memorial Tribute -->
         <div class="memorial-card">
-          <div style="font-size: 1.8rem; margin-bottom: 8px;">🕊️</div>
+          <div style="font-size: 2rem; margin-bottom: 8px;">🕊️</div>
           <h3>${teamData.memorial.title}</h3>
-          <p style="color: var(--accent-cyan); font-weight: 600; font-size: 1.05rem; margin-bottom: 4px;">
+          <p style="color: var(--ocean-blue); font-weight: 700; font-size: 1.05rem; margin-bottom: 6px;">
             ${teamData.memorial.program} — ${teamData.memorial.role}
           </p>
-          <p style="color: #CBD5E1; max-width: 720px; margin: 16px auto 0; font-style: italic; line-height: 1.8;">
+          <p style="color: var(--text-body); max-width: 720px; margin: 16px auto 0; font-style: italic; line-height: 1.8;">
             ${teamData.memorial.description}
           </p>
         </div>

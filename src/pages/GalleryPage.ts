@@ -2,11 +2,11 @@ import { galleryData } from '../data/siteData';
 
 export function renderGalleryPage(): string {
   return `
-    <section class="section" style="padding-top: 60px;">
+    <section class="section" style="padding-top: 50px; background: var(--bg-page);">
       <div class="container">
         <div class="section-header">
           <span class="badge">Visual Archive</span>
-          <h1 class="section-title text-gradient">Photo Gallery</h1>
+          <h1 class="section-title">Photo Gallery</h1>
           <p class="section-subtitle">Moments from RoboSub competitions, pool testing sessions, manufacturing, and team events.</p>
         </div>
 

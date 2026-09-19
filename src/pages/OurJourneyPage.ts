@@ -2,17 +2,17 @@ import { journeyTimeline } from '../data/siteData';
 
 export function renderOurJourneyPage(): string {
   return `
-    <section class="section" style="padding-top: 60px;">
+    <section class="section" style="padding-top: 50px; background: var(--bg-page);">
       <div class="container">
         <div class="section-header">
           <span class="badge">Milestones & Growth</span>
-          <h1 class="section-title text-gradient">Our Journey</h1>
+          <h1 class="section-title">Our Journey</h1>
           <p class="section-subtitle">What started as an idea has grown into an international contender and an inspiring community of innovators.</p>
         </div>
 
-        <div style="max-width: 860px; margin: 0 auto 60px; text-align: center; color: #E2E8F0; font-size: 1.15rem; line-height: 1.8;">
+        <div style="max-width: 820px; margin: 0 auto 50px; text-align: center; color: var(--text-body); font-size: 1.15rem; line-height: 1.8;">
           <p>
-            So.. where did it all start? Okanagan Marine Robotics was founded by a passionate handful of students wanting to solve one of engineering's hardest challenges: autonomous subsea robotics. Today, we represent the University of British Columbia on the global stage.
+            So.. where did it all start? What started as an idea has become a movement of innovation and discovery. Together, we continue to explore new depths and redefine what’s possible in the water.
           </p>
         </div>
 
@@ -27,9 +27,11 @@ export function renderOurJourneyPage(): string {
           `).join('')}
         </div>
 
-        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 40px; margin-top: 60px; text-align: center;">
-          <h2 style="font-size: 1.8rem; margin-bottom: 16px;">Be Part of Our Next Chapter</h2>
-          <p style="color: var(--text-muted); max-width: 650px; margin: 0 auto 28px;">
+        <div class="card" style="margin-top: 50px; text-align: center; max-width: 820px; margin-left: auto; margin-right: auto;">
+          <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 12px; text-transform: uppercase;">
+            Be Part of Our Next Chapter
+          </h2>
+          <p style="color: var(--text-body); max-width: 650px; margin: 0 auto 24px; font-size: 1.05rem;">
             Whether you want to build autonomous perception algorithms, fabricate carbon composite hulls, or sponsor the next generation of engineers, we would love to have you.
           </p>
           <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
