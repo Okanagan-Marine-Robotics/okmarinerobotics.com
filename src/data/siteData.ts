@@ -87,9 +87,9 @@ export const homeData = {
   },
   stats: [
     { value: "$59,000", label: "in Funding Acquired" },
-    { value: "11th", label: "Place Overall in RoboSub 2025 (58 Teams)" },
-    { value: "2nd", label: "Ranked Team in Canada" },
-    { value: "80+", label: "Active Student Engineers" }
+    { value: "21st", label: "Place Overall in RoboSub 2026 (58 Teams)" },
+    { value: "3rd", label: "Ranked Team in Canada" },
+    { value: "100+", label: "Active Student Engineers" }
   ],
   whyUs: [
     {
@@ -139,12 +139,8 @@ export const homeData = {
       a: "We welcome students from all faculties! In addition to electrical, mechanical, and computer engineering, our team relies on computer science, management, finance, physics, psychology, and media students."
     },
     {
-      q: "Is there a cost to join?",
-      a: "No! Joining Okanagan Marine Robotics is completely free for all UBC Okanagan students."
-    },
-    {
       q: "What is the time commitment?",
-      a: "Typical commitment ranges from 3 to 10 hours per week depending on your role, subteam, and competition deadlines."
+      a: "Typical commitment ranges from 3 to 10 hours per week depending on your role, subteam, and competition deadlines. We are flexible, so you can commit as many or as few hours as you want."
     },
     {
       q: "What is the most important thing I should know before joining?",
@@ -152,7 +148,7 @@ export const homeData = {
     },
     {
       q: "How do I join?",
-      a: "You can apply during our fall and winter recruitment cycles through our website or send an email directly to okmarinerobotics@gmail.com with your interests!"
+      a: "You can apply during our fall and winter recruitment cycles through our linktree or send an email directly to okmarinerobotics@gmail.com with your interests!"
     }
   ],
   newsletters: [
@@ -291,15 +287,16 @@ export const sponsorsData = {
       "tier": "Gold Sponsor",
       "logo": "/images/6_3c8296fba8.jpg",
       "desc": "SKYTRAC Systems Ltd. is a global leader in aviation connectivity and satellite communications."
-    }
-  ],
-  "silver": [
+    },
     {
       "name": "Kelowna Family YMCA",
       "tier": "Silver Sponsor",
       "logo": "/images/7_b2679a5b43.jpg",
       "desc": "Provides vital deep-pool water testing facilities for our AUV and subsea vehicles."
-    },
+    }
+  ],
+  "silver": [
+
     {
       "name": "BlueRobotics",
       "tier": "Silver Sponsor",
@@ -317,14 +314,14 @@ export const sponsorsData = {
       "tier": "Silver Sponsor",
       "logo": "/images/10_dd13e27a07.jpg",
       "desc": "Global distributor of semiconductors and electronic components."
-    }
-  ],
-  "bronze": [
+    },
     {
       "name": "Bloom Robotics",
       "tier": "Bronze Sponsor",
       "logo": "/images/11_1f368566c8.jpg"
-    },
+    }
+  ],
+  "bronze": [
     {
       "name": "Rocky Mountain Fluid Power",
       "tier": "Bronze Sponsor",
