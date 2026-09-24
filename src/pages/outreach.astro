@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import OutreachTabs from '../components/OutreachTabs.vue';
+import { outreachData } from '../data/siteData';
+---
+
+<Layout title="Community Outreach | Okanagan Marine Robotics">
+  <section class="section" style="padding-top: 50px; background: var(--bg-page);">
+    <div class="container">
+      <OutreachTabs client:load items={outreachData} />
+    </div>
+  </section>
+</Layout>

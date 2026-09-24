@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { teamData } from '../data/siteData';
+---
+
+<Layout title="Our Team | Okanagan Marine Robotics">
+  <section class="section" style="padding-top: 50px; background: var(--bg-page);">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Team Roster</span>
+        <h1 class="section-title">Meet The Team</h1>
+        <p class="section-subtitle">The dedicated student engineers, computer scientists, managers, and innovators behind Okanagan Marine Robotics.</p>
+      </div>
+
+      <!-- Executives -->
+      <div style="margin-bottom: 60px;">
+        <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 24px; border-left: 5px solid var(--ocean-blue); padding-left: 14px; text-transform: uppercase;">
+          Executive Team
+        </h2>
+        <div class="team-grid">
+          {teamData.executives.map((m) => (
+            <div class="member-card">
+              <div class="member-img-wrap">
+                <img src={m.img} alt={m.name} loading="lazy" />
+              </div>
+              <div class="member-info">
+                <div class="member-name">{m.name}</div>
+                <div class="member-role">{m.role}</div>
+                <div class="member-program">{m.program}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Management & Operations -->
+      {teamData.management.length > 0 && (
+        <div style="margin-bottom: 60px;">
+          <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 24px; border-left: 5px solid var(--ocean-blue); padding-left: 14px; text-transform: uppercase;">
+            Management &amp; Operations
+          </h2>
+          <div class="team-grid">
+            {teamData.management.map((m) => (
+              <div class="member-card">
+                <div class="member-img-wrap">
+                  <img src={m.img} alt={m.name} loading="lazy" />
+                </div>
+                <div class="member-info">
+                  <div class="member-name">{m.name}</div>
+                  <div class="member-role">{m.role}</div>
+                  <div class="member-program">{m.program}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <!-- Subteam Leads & Specialists -->
+      <div style="margin-bottom: 60px;">
+        <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 24px; border-left: 5px solid var(--ocean-blue); padding-left: 14px; text-transform: uppercase;">
+          Subteam Leads &amp; Specialists
+        </h2>
+        <div class="team-grid">
+          {teamData.subteamLeads.map((m) => (
+            <div class="member-card">
+              <div class="member-img-wrap">
+                <img src={m.img} alt={m.name} loading="lazy" />
+              </div>
+              <div class="member-info">
+                <div class="member-name">{m.name}</div>
+                <div class="member-role">{m.role}</div>
+                <div class="member-program">{m.program}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Memorial Tribute -->
+      <div class="memorial-card">
+        <div class="memorial-img-wrap">
+          <img src={teamData.memorial.img} alt={teamData.memorial.name} loading="lazy" />
+        </div>
+        <div class="memorial-content">
+          <h3>{teamData.memorial.title}</h3>
+          <p class="memorial-role">
+            {teamData.memorial.program} — {teamData.memorial.role}
+          </p>
+          <p class="memorial-description">
+            {teamData.memorial.description}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

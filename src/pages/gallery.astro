@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GalleryLightbox from '../components/GalleryLightbox.vue';
+import { galleryData } from '../data/siteData';
+---
+
+<Layout title="Gallery | Okanagan Marine Robotics">
+  <section class="section" style="padding-top: 50px; background: var(--bg-page);">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Visual Archive</span>
+        <h1 class="section-title">Photo Gallery</h1>
+        <p class="section-subtitle">Moments from RoboSub competitions, pool testing sessions, manufacturing, and team events.</p>
+      </div>
+
+      <GalleryLightbox client:load photos={galleryData} />
+    </div>
+  </section>
+</Layout>

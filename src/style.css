@@ -905,6 +905,177 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: contain;
 }
 
+/* Sponsorships Page Showcase */
+.sponsorship-tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.tier-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 32px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.tier-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.tier-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.tier-card.tier-platinum::before {
+  background: linear-gradient(90deg, #0077B6, #48CAE4);
+}
+
+.tier-card.tier-gold::before {
+  background: linear-gradient(90deg, #D4AF37, #F3E5AB);
+}
+
+.tier-card.tier-silver::before {
+  background: linear-gradient(90deg, #94A3B8, #CBD5E1);
+}
+
+.tier-card.tier-bronze::before {
+  background: linear-gradient(90deg, #B45309, #D97706);
+}
+
+.tier-card-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 14px;
+  align-self: center;
+}
+
+.tier-platinum .tier-card-badge {
+  background: #E0F2FE;
+  color: #0369A1;
+}
+
+.tier-gold .tier-card-badge {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+.tier-silver .tier-card-badge {
+  background: #F1F5F9;
+  color: #475569;
+}
+
+.tier-bronze .tier-card-badge {
+  background: #FFEDD5;
+  color: #9A3412;
+}
+
+.tier-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--navy-deep);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.tier-card-desc {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.why-sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.why-sponsor-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 30px 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.why-sponsor-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: #BCD3E6;
+}
+
+.why-sponsor-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-sm);
+  background: var(--ocean-tint);
+  color: var(--ocean-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+}
+
+.why-sponsor-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--navy-deep);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.why-sponsor-desc {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .sponsorship-tiers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .why-sponsor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .sponsorship-tiers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Gallery Grid */
 .gallery-grid {
   display: grid;
