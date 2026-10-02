@@ -176,7 +176,7 @@ export const teamData = {
   {
     "name": "Kezia Wong",
     "role": "VP Management",
-    "program": "BA Psychology",
+    "program": "BASc Mechanical Engineering",
     "img": ""
   },
   {
@@ -198,19 +198,19 @@ export const teamData = {
   subteamLeads: [
   {
     "name": "Leith Ross",
-    "role": "Mechanical Lead",
+    "role": "AUV Mechanical Lead",
     "program": "BASc Mechanical Engineering",
     "img": ""
   },
   {
     "name": "Uplove Parhar",
-    "role": "Mechanical Lead",
+    "role": "AUV Electrical Lead",
     "program": "BASc Electrical Engineering",
     "img": ""
   },
   {
     "name": "Amber Hawker",
-    "role": "Software Lead",
+    "role": "AUV Software Lead",
     "program": "BSc Computer Science",
     "img": ""
   },
