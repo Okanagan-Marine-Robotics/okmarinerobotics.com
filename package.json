@@ -4,16 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "dependencies": {
-    "@astrojs/vercel": "^8.0.0",
-    "@astrojs/vue": "^5.0.0",
-    "@vercel/analytics": "^1.6.1",
-    "astro": "^5.0.0",
-    "vue": "^3.5.0"
+  "devDependencies": {
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
   }
 }
