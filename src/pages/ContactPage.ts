@@ -11,38 +11,6 @@ export function renderContactPage(): string {
         </div>
 
         <div class="contact-grid">
-          <!-- Form -->
-          <div class="card" style="padding: 36px;">
-            <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 20px; text-transform: uppercase;">Send a Message</h2>
-            <form id="contactForm" onsubmit="window.handleContactSubmit(event)">
-              <div class="form-group">
-                <label class="form-label" for="contactName">Full Name *</label>
-                <input class="form-control" type="text" id="contactName" required placeholder="Jane Doe" />
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="contactEmail">Email Address *</label>
-                <input class="form-control" type="email" id="contactEmail" required placeholder="jane@example.com" />
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="contactSubject">Inquiry Topic</label>
-                <select class="form-control" id="contactSubject">
-                  <option value="General">General Inquiry</option>
-                  <option value="Sponsorship">Sponsorship & Partnership</option>
-                  <option value="Recruitment">Student Recruitment</option>
-                  <option value="Outreach">STEM Outreach / Workshop</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="contactMessage">Message *</label>
-                <textarea class="form-control" id="contactMessage" required placeholder="Tell us how we can collaborate..."></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary" style="width: 100%;">
-                Send Message
-              </button>
-              <div id="formFeedback" style="margin-top: 16px; display: none; padding: 14px; border-radius: var(--radius-sm); font-size: 0.95rem;"></div>
-            </form>
-          </div>
-
           <!-- Contact Details -->
           <div style="display: flex; flex-direction: column; gap: 20px;">
             <div class="card">
