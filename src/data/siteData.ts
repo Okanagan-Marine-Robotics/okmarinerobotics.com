@@ -193,7 +193,18 @@ export const teamData = {
   }
 ],
   management: [
-
+  {
+    "name": "Haiya Patel",
+    "role": "Club Internal Lead",
+    "program": "",
+    "img": ""
+  },
+  {
+    "name": "Cheyenne Gawley",
+    "role": "Outreach Lead",
+    "program": "BASc Mechanical Engineering",
+    "img": ""
+  }
 ],
   subteamLeads: [
   {
