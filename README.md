@@ -23,6 +23,10 @@ Creates an optimized, minified production build in `dist/`.
 npm run preview
 ```
 
+A production build generates one HTML document per route, plus `404.html`, `sitemap.xml`, and `robots.txt`. Add new pages to the route table in `src/site.ts` so the build includes them in the sitemap. Vercel serves extensionless paths and uses the custom 404 page for unknown routes.
+
+Vercel revalidates HTML by default. The cache policy in `vercel.json` gives fingerprinted JS, CSS, and fonts one year of immutable caching. Images and downloadable documents revalidate after one day.
+
 ---
 
 ## Project Architecture & Pages
@@ -39,8 +43,10 @@ npm run preview
 │   │   └── siteData.ts  # Centralized editable data (Team roster, sponsors, stats, FAQs, etc.)
 │   ├── pages/
 │   ├── style.css        
-│   └── main.ts          # Application entry point with client router
-├── index.html           # HTML shell with Google Fonts & SEO metadata
+│   ├── main.ts          # Browser interactions
+│   └── site.ts          # Route table, HTML rendering, and sitemap
+├── index.html           # Shared HTML shell
+├── vite.config.ts       # Static page generation and local route handling
 └── package.json
 ```
 
@@ -61,6 +67,7 @@ Open `src/data/siteData.ts` and modify the `executives`, `management`, or `subte
   img: '/images/photo.jpg'
 }
 ```
+Use an empty `img` value if a team member has no confirmed portrait. The card will display their initials.
 
 ### Add a New Sponsor
 Open `src/data/siteData.ts` and add them to `sponsorsData.platinum`, `gold`, `silver`, or `bronze`:

@@ -1,4 +1,4 @@
-import { galleryData } from '../data/siteData';
+import { galleryData } from '../data/siteData.ts';
 
 export function renderGalleryPage(): string {
   return `
@@ -12,18 +12,17 @@ export function renderGalleryPage(): string {
 
         <div class="gallery-grid">
           ${galleryData.map(photo => `
-            <div class="gallery-item" onclick="window.openLightbox('${photo.src}')" role="button" tabindex="0" aria-label="View photo">
+            <a class="gallery-item" href="${photo.src}">
               <img src="${photo.src}" alt="${photo.alt}" loading="lazy" />
-            </div>
+            </a>
           `).join('')}
         </div>
       </div>
     </section>
 
-    <!-- Lightbox Modal -->
-    <div class="lightbox-modal" id="lightboxModal" onclick="window.closeLightbox()">
-      <button class="lightbox-close" onclick="window.closeLightbox()" aria-label="Close Lightbox">&times;</button>
-      <img src="" alt="Enlarged view" class="lightbox-img" id="lightboxImg" onclick="event.stopPropagation()" />
-    </div>
+    <dialog class="lightbox-modal" id="lightboxModal" aria-label="Gallery photo">
+      <form method="dialog"><button class="lightbox-close" aria-label="Close photo">&times;</button></form>
+      <img alt="" class="lightbox-img" />
+    </dialog>
   `;
 }

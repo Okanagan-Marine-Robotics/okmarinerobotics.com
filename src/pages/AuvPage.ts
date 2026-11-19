@@ -1,4 +1,4 @@
-import { siteConfig } from '../data/siteData';
+import { siteConfig } from '../data/siteData.ts';
 
 export function renderAuvPage(): string {
   return `
@@ -12,28 +12,28 @@ export function renderAuvPage(): string {
 
         <div class="card" style="padding: 0; overflow: hidden; margin-bottom: 50px;">
           <img src="${siteConfig.poolTestingImage}" alt="Ogopogo submerged in testing pool" style="width: 100%; max-height: 480px; object-fit: cover;" />
-          <div style="padding: 36px;">
+          <div style="padding: clamp(16px, 4vw, 36px);">
             <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 12px; text-transform: uppercase;">
               Next-Generation Subsea Autonomy
             </h2>
             <p style="color: var(--text-body); font-size: 1.1rem; line-height: 1.8; margin-bottom: 24px;">
               Ogopogo is a true team effort that will continue to evolve moving toward RoboSub 2026. Each improvement builds on what we've learned from previous challenges, testing sessions at the Kelowna Family YMCA, and judge feedback in California.
             </p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+            <div class="technical-grid" style="padding-top: 20px; border-top: 1px solid var(--border-color);">
               <div>
-                <div style="color: var(--ocean-blue); font-weight: 800; font-family: var(--font-heading); font-size: 1.4rem;">8 Thrusters</div>
+                <div class="technical-value">8 Thrusters</div>
                 <div style="color: var(--text-muted); font-size: 0.9rem;">6-DOF Full Holonomic Control</div>
               </div>
               <div>
-                <div style="color: var(--ocean-blue); font-weight: 800; font-family: var(--font-heading); font-size: 1.4rem;">STM32F7 MCU</div>
+                <div class="technical-value">STM32F7 MCU</div>
                 <div style="color: var(--text-muted); font-size: 0.9rem;">Custom Embedded Electronics</div>
               </div>
               <div>
-                <div style="color: var(--ocean-blue); font-weight: 800; font-family: var(--font-heading); font-size: 1.4rem;">ROS2 Middleware</div>
+                <div class="technical-value">ROS2 Middleware</div>
                 <div style="color: var(--text-muted); font-size: 0.9rem;">Humble Robotics Architecture</div>
               </div>
               <div>
-                <div style="color: var(--ocean-blue); font-weight: 800; font-family: var(--font-heading); font-size: 1.4rem;">YOLOv8 Vision</div>
+                <div class="technical-value">YOLOv8 Vision</div>
                 <div style="color: var(--text-muted); font-size: 0.9rem;">Real-Time Subsea Perception</div>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import { sponsorsData } from '../data/siteData';
+import { sponsorsData } from '../data/siteData.ts';
 
 export function renderSponsorsPage(): string {
   return `

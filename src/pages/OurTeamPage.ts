@@ -1,93 +1,57 @@
-import { teamData } from '../data/siteData';
+import { teamData, type TeamMember } from '../data/siteData.ts';
+
+function renderTeamGroup(title: string, members: TeamMember[]): string {
+  return `
+    <section class="team-group">
+      <h2 class="subsection-title">${title}</h2>
+      <div class="team-grid">
+        ${members.map(member => {
+          const initials = member.name.split(/\s+/).map(word => word[0]).join('');
+          return `
+            <article class="member-card">
+              <div class="member-img-wrap">
+                ${member.img
+                  ? `<img src="${member.img}" alt="" loading="lazy" />`
+                  : `<div class="member-placeholder" aria-hidden="true">${initials}</div>`}
+              </div>
+              <div class="member-info">
+                <h3 class="member-name">${member.name}</h3>
+                <p class="member-role">${member.role}</p>
+                ${member.program ? `<p class="member-program">${member.program}</p>` : ''}
+              </div>
+            </article>
+          `;
+        }).join('')}
+      </div>
+    </section>
+  `;
+}
 
 export function renderOurTeamPage(): string {
+  const memorial = teamData.memorial;
   return `
-    <section class="section" style="padding-top: 50px; background: var(--bg-page);">
+    <section class="section">
       <div class="container">
         <div class="section-header">
-          <span class="badge">Team Roster</span>
-          <h1 class="section-title">Meet The Team</h1>
+          <span class="badge">Team roster</span>
+          <h1 class="section-title">Meet the team</h1>
           <p class="section-subtitle">The dedicated student engineers, computer scientists, managers, and innovators behind Okanagan Marine Robotics.</p>
         </div>
 
-        <!-- Executives -->
-        <div style="margin-bottom: 60px;">
-          <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 24px; border-left: 5px solid var(--ocean-blue); padding-left: 14px; text-transform: uppercase;">
-            Executive Team
-          </h2>
-          <div class="team-grid">
-            ${teamData.executives.map(m => `
-              <div class="member-card">
-                <div class="member-img-wrap">
-                  <img src="${m.img}" alt="${m.name}" loading="lazy" />
-                </div>
-                <div class="member-info">
-                  <div class="member-name">${m.name}</div>
-                  <div class="member-role">${m.role}</div>
-                  <div class="member-program">${m.program}</div>
-                </div>
-              </div>
-            `).join('')}
-          </div>
-        </div>
+        ${renderTeamGroup('Executive team', teamData.executives)}
+        ${renderTeamGroup('Management & operations', teamData.management)}
+        ${renderTeamGroup('Subteam leads & specialists', teamData.subteamLeads)}
 
-        <!-- Management & Operations -->
-        <div style="margin-bottom: 60px;">
-          <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 24px; border-left: 5px solid var(--ocean-blue); padding-left: 14px; text-transform: uppercase;">
-            Management & Operations
-          </h2>
-          <div class="team-grid">
-            ${teamData.management.map(m => `
-              <div class="member-card">
-                <div class="member-img-wrap">
-                  <img src="${m.img}" alt="${m.name}" loading="lazy" />
-                </div>
-                <div class="member-info">
-                  <div class="member-name">${m.name}</div>
-                  <div class="member-role">${m.role}</div>
-                  <div class="member-program">${m.program}</div>
-                </div>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-
-        <!-- Engineering Leads & Core Subteams -->
-        <div style="margin-bottom: 60px;">
-          <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 24px; border-left: 5px solid var(--ocean-blue); padding-left: 14px; text-transform: uppercase;">
-            Subteam Leads & Specialists
-          </h2>
-          <div class="team-grid">
-            ${teamData.subteamLeads.map(m => `
-              <div class="member-card">
-                <div class="member-img-wrap">
-                  <img src="${m.img}" alt="${m.name}" loading="lazy" />
-                </div>
-                <div class="member-info">
-                  <div class="member-name">${m.name}</div>
-                  <div class="member-role">${m.role}</div>
-                  <div class="member-program">${m.program}</div>
-                </div>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-
-        <!-- Memorial Tribute -->
-        <div class="memorial-card">
+        <article class="memorial-card">
           <div class="memorial-img-wrap">
-            <img src="${teamData.memorial.img}" alt="${teamData.memorial.name}" loading="lazy" />
+            <img src="${memorial.img}" alt="${memorial.name}" loading="lazy" />
           </div>
-          <div class="memorial-content">
-            <h3>${teamData.memorial.title}</h3>
-            <p class="memorial-role">
-              ${teamData.memorial.program} — ${teamData.memorial.role}
-            </p>
-            <p class="memorial-description">
-              ${teamData.memorial.description}
-            </p>
+          <div>
+            <h2>${memorial.title}</h2>
+            <p class="memorial-role">${memorial.program} — ${memorial.role}</p>
+            <p class="memorial-description">${memorial.description}</p>
           </div>
-        </div>
+        </article>
       </div>
     </section>
   `;

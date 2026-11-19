@@ -171,13 +171,13 @@ export const teamData = {
     "name": "Antoine Godin",
     "role": "VP Finance",
     "program": "BASc Electrical Engineering",
-    "img": ""
+    "img": "/images/Antoine_20Godin_JPG_87a7010523.jpg"
   },
   {
     "name": "Kezia Wong",
     "role": "VP Management",
     "program": "BASc Mechanical Engineering",
-    "img": ""
+    "img": "/images/Kezia_20Wong_edited_7a6347c4e6.jpg"
   },
   {
     "name": "Samuel Yoskovitz",
@@ -189,7 +189,7 @@ export const teamData = {
     "name": "Lina Naleto",
     "role": "Hydrofoil Technical Director",
     "program": "BASc Mechanical Engineering",
-    "img": ""
+    "img": "/images/Lina_20Naleto_JPG_b2632e726e.jpg"
   }
 ],
   management: [
@@ -203,7 +203,7 @@ export const teamData = {
     "name": "Cheyenne Gawley",
     "role": "Outreach Lead",
     "program": "BASc Mechanical Engineering",
-    "img": ""
+    "img": "/images/Cheyenne_20Gawley_JPG_5409e59ef6.jpg"
   }
 ],
   subteamLeads: [
@@ -217,13 +217,13 @@ export const teamData = {
     "name": "Uplove Parhar",
     "role": "AUV Electrical Lead",
     "program": "BASc Electrical Engineering",
-    "img": ""
+    "img": "/images/Uplove_20Parhar_edited_cc4253b3d3.jpg"
   },
   {
     "name": "Amber Hawker",
     "role": "AUV Software Lead",
     "program": "BSc Computer Science",
-    "img": ""
+    "img": "/images/Amber_20Hawker_JPG_a25d0c6734.jpg"
   },
 ],
   memorial: {

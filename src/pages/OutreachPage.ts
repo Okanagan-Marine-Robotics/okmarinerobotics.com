@@ -1,4 +1,4 @@
-import { outreachData } from '../data/siteData';
+import { outreachData } from '../data/siteData.ts';
 
 export function renderOutreachPage(): string {
   const defaultItem = outreachData[0];
@@ -10,7 +10,7 @@ export function renderOutreachPage(): string {
         <!-- Outreach Tabs matching live site -->
         <div class="outreach-tabs" id="outreachTabs">
           ${outreachData.map((item, idx) => `
-            <button class="outreach-tab-btn ${idx === 0 ? 'active' : ''}" data-index="${idx}">
+            <button class="outreach-tab-btn ${idx === 0 ? 'active' : ''}" type="button" aria-pressed="${idx === 0}" aria-controls="outreachActiveContent">
               ${item.title}
             </button>
           `).join('')}

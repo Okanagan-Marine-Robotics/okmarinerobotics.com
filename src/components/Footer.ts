@@ -1,4 +1,4 @@
-import { siteConfig } from '../data/siteData';
+import { siteConfig } from '../data/siteData.ts';
 
 export function renderFooter(): string {
   return `
@@ -7,7 +7,7 @@ export function renderFooter(): string {
         <div class="footer-top">
           <div class="footer-brand">
             <div class="brand-logo" style="margin-bottom: 12px;">
-              <img src="${siteConfig.logo}" alt="${siteConfig.name} Logo" width="46" height="46" />
+              <img src="${siteConfig.logo}" alt="" width="46" height="46" />
               <div>
                 <div class="brand-name">OKANAGAN MARINE ROBOTICS</div>
                 <div class="brand-sub">${siteConfig.institution}</div>
@@ -15,7 +15,7 @@ export function renderFooter(): string {
             </div>
             <p>${siteConfig.tagline}</p>
             <div style="font-size: 0.9rem; color: #A9D6E5; margin-bottom: 16px;">
-              📍 ${siteConfig.address}
+              ${siteConfig.address}
             </div>
             <div class="social-links">
               <a href="${siteConfig.socials.instagram}" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">

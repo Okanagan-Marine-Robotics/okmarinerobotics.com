@@ -33,28 +33,28 @@ export function renderAuvSoftwarePage(): string {
           <p style="color: var(--text-body); font-size: 1.05rem; line-height: 1.8; margin-bottom: 24px;">
             Our software stack is organized using an industry-standard Subsea Control Hierarchy, isolating low-level hardware actuation from high-level strategic reasoning. This guarantees that individual node failures never compromise vehicle stability.
           </p>
-          <div style="background: #F8FAFC; border-radius: var(--radius-md); padding: 24px; text-align: center; border: 1px solid var(--border-color); margin-bottom: 24px;">
+          <div style="background: var(--diagram-surface); border-radius: var(--radius-md); padding: 24px; text-align: center; border: 1px solid var(--border-color); margin-bottom: 24px;">
             <img src="/images/f0621d_a915c38e765942c181ee2af_cccc02c609.png" alt="ROS2 Software System Architecture Diagram" style="max-height: 380px; margin: 0 auto; object-fit: contain;" />
           </div>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
-            <div style="background: var(--ocean-tint); padding: 18px; border-radius: var(--radius-sm); border: 1px solid #D0E4F5;">
-              <div style="color: var(--ocean-blue); font-weight: 800; font-family: var(--font-heading); font-size: 1.15rem;">L5 — Planning</div>
+          <div class="technical-grid">
+            <div class="technical-panel">
+              <div class="technical-value">L5 — Planning</div>
               <p style="color: var(--text-body); font-size: 0.9rem; margin-top: 6px;">Executive mission logic, qualification task sequencing, and fallback behavior trees.</p>
             </div>
-            <div style="background: var(--ocean-tint); padding: 18px; border-radius: var(--radius-sm); border: 1px solid #D0E4F5;">
-              <div style="color: var(--ocean-blue); font-weight: 800; font-family: var(--font-heading); font-size: 1.15rem;">L4 — Perception</div>
+            <div class="technical-panel">
+              <div class="technical-value">L4 — Perception</div>
               <p style="color: var(--text-body); font-size: 0.9rem; margin-top: 6px;">YOLOv8 target detection, OpenCV color gating, buoy identification, and bin segmentation.</p>
             </div>
-            <div style="background: var(--ocean-tint); padding: 18px; border-radius: var(--radius-sm); border: 1px solid #D0E4F5;">
-              <div style="color: var(--ocean-blue); font-weight: 800; font-family: var(--font-heading); font-size: 1.15rem;">L3 — Navigation</div>
+            <div class="technical-panel">
+              <div class="technical-value">L3 — Navigation</div>
               <p style="color: var(--text-body); font-size: 0.9rem; margin-top: 6px;">State estimation, Extended Kalman Filter (EKF), IMU fusion, and waypoint trajectory planning.</p>
             </div>
-            <div style="background: var(--ocean-tint); padding: 18px; border-radius: var(--radius-sm); border: 1px solid #D0E4F5;">
-              <div style="color: var(--ocean-blue); font-weight: 800; font-family: var(--font-heading); font-size: 1.15rem;">L2 — Execution</div>
+            <div class="technical-panel">
+              <div class="technical-value">L2 — Execution</div>
               <p style="color: var(--text-body); font-size: 0.9rem; margin-top: 6px;">PID position/velocity loops and 8-thruster holonomic allocation matrix.</p>
             </div>
-            <div style="background: var(--ocean-tint); padding: 18px; border-radius: var(--radius-sm); border: 1px solid #D0E4F5;">
-              <div style="color: var(--ocean-blue); font-weight: 800; font-family: var(--font-heading); font-size: 1.15rem;">L1 — Hardware</div>
+            <div class="technical-panel">
+              <div class="technical-value">L1 — Hardware</div>
               <p style="color: var(--text-body); font-size: 0.9rem; margin-top: 6px;">STM32 microcontroller drivers, serial micro-ROS communication, and PWM generators.</p>
             </div>
           </div>
@@ -68,7 +68,7 @@ export function renderAuvSoftwarePage(): string {
             <p style="color: var(--text-body); line-height: 1.6; margin-bottom: 16px;">
               Trained on hundreds of synthetic and in-pool annotated images, our deep neural networks accurately recognize underwater gates, torpedo targets, style markers, and bins despite water turbidity and shifting caustic sunlight.
             </p>
-            <div style="background: #F8FAFC; border-radius: var(--radius-sm); padding: 12px; text-align: center; border: 1px solid var(--border-color); margin-top: auto;">
+            <div style="background: var(--diagram-surface); border-radius: var(--radius-sm); padding: 12px; text-align: center; border: 1px solid var(--border-color); margin-top: auto;">
               <img src="/images/image_bb73b7e2fb.png" alt="OpenCV Object Detection" style="max-height: 180px; margin: 0 auto; object-fit: contain;" />
             </div>
           </div>
@@ -79,7 +79,7 @@ export function renderAuvSoftwarePage(): string {
             <p style="color: var(--text-body); line-height: 1.6; margin-bottom: 16px;">
               Our automated planning system relies on reactive Behavior Trees. If a target is lost or obstructed by bubbles, the vehicle gracefully pivots into a localized search pattern before timing out and moving to the next objective.
             </p>
-            <div style="background: #F8FAFC; border-radius: var(--radius-sm); padding: 12px; text-align: center; border: 1px solid var(--border-color); margin-top: auto;">
+            <div style="background: var(--diagram-surface); border-radius: var(--radius-sm); padding: 12px; text-align: center; border: 1px solid var(--border-color); margin-top: auto;">
               <img src="/images/image_45f613065f.png" alt="Behavior Tree Mission Planner" style="max-height: 180px; margin: 0 auto; object-fit: contain;" />
             </div>
           </div>
@@ -90,7 +90,7 @@ export function renderAuvSoftwarePage(): string {
             <p style="color: var(--text-body); line-height: 1.6; margin-bottom: 16px;">
               To locate the underwater acoustic pinger, Ogopogo samples signals from an array of 4 subsea hydrophones. Phase differences are processed using cross-correlation algorithms to compute precise 3D azimuth and elevation bearings.
             </p>
-            <div style="background: #F8FAFC; border-radius: var(--radius-sm); padding: 12px; text-align: center; border: 1px solid var(--border-color); margin-top: auto;">
+            <div style="background: var(--diagram-surface); border-radius: var(--radius-sm); padding: 12px; text-align: center; border: 1px solid var(--border-color); margin-top: auto;">
               <img src="/images/image_4158e25f29.png" alt="Acoustic Signal Processing" style="max-height: 180px; margin: 0 auto; object-fit: contain;" />
             </div>
           </div>
@@ -101,8 +101,8 @@ export function renderAuvSoftwarePage(): string {
             <p style="color: var(--text-body); line-height: 1.6; margin-bottom: 16px;">
               We replicate competition ocean dynamics in Stonefish, simulating hydrodynamic drag, thruster fluid dynamics, synthetic camera distortion, and buoyancy imbalances to validate full mission logic before touching pool water.
             </p>
-            <div style="background: #F8FAFC; border-radius: var(--radius-sm); padding: 12px; text-align: center; border: 1px solid var(--border-color); margin-top: auto;">
-              <img src="/images/image_3160a37482.png" alt="Stonefish Subsea Simulator" style="max-height: 180px; margin: 0 auto; object-fit: contain;" />
+            <div style="background: var(--diagram-surface); border-radius: var(--radius-sm); padding: 12px; text-align: center; border: 1px solid var(--border-color); margin-top: auto;">
+              <img src="/images/image_3f50d53243.png" width="567" height="296" loading="lazy" alt="Stonefish Subsea Simulator alongside the ROS visualization window" style="max-height: 180px; margin: 0 auto; object-fit: contain;" />
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { journeyTimeline } from '../data/siteData';
+import { journeyTimeline } from '../data/siteData.ts';
 
 export function renderOurJourneyPage(): string {
   return `

@@ -1,4 +1,4 @@
-import { siteConfig } from '../data/siteData';
+import { siteConfig } from '../data/siteData.ts';
 
 export function renderContactPage(): string {
   return `

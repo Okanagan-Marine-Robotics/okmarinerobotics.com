@@ -61,12 +61,12 @@ export function renderAuvElectricalPage(): string {
 
         <!-- Electrical Modules -->
         <div style="display: flex; flex-direction: column; gap: 40px;">
-          ${modules.map((m, idx) => `
-            <div class="card" style="display: grid; grid-template-columns: ${idx % 2 === 0 ? '1fr 1.2fr' : '1.2fr 1fr'}; gap: 36px; align-items: center;">
-              <div style="order: ${idx % 2 === 0 ? 1 : 2}; background: #F8FAFC; border-radius: var(--radius-md); padding: 20px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-color);">
+          ${modules.map(m => `
+            <div class="card component-card">
+              <div class="component-image">
                 <img src="${m.img}" alt="${m.title}" style="max-height: 280px; object-fit: contain;" />
               </div>
-              <div style="order: ${idx % 2 === 0 ? 2 : 1};">
+              <div>
                 <span class="badge" style="margin-bottom: 12px;">${m.badge}</span>
                 <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 14px; text-transform: uppercase;">${m.title}</h2>
                 <p style="color: var(--text-body); font-size: 1.05rem; line-height: 1.8;">${m.desc}</p>
