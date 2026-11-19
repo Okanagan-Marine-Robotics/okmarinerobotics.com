@@ -21,7 +21,6 @@
     "tiers": [
       {
         "name": "Platinum Tier",
-        "amount": "$5,000+",
         "perks": [
           "Prominent logo on AUV hull & hydrofoil wings",
           "Featured logo on team uniforms & banners",
@@ -32,7 +31,6 @@
       },
       {
         "name": "Gold Tier",
-        "amount": "$2,500+",
         "perks": [
           "Medium logo on vehicle chassis & competition banners",
           "Logo on team apparel & website footer",
@@ -42,7 +40,6 @@
       },
       {
         "name": "Silver Tier",
-        "amount": "$1,000+",
         "perks": [
           "Logo on website sponsors page & social media recognition",
           "Logo featured on competition presentation slide decks",
@@ -51,7 +48,6 @@
       },
       {
         "name": "Bronze & In-Kind",
-        "amount": "$500+ / Hardware",
         "perks": [
           "Logo on website",
           "Social media shoutout upon hardware delivery",

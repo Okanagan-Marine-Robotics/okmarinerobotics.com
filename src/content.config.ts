@@ -64,7 +64,7 @@ const pageTemplates = z.discriminatedUnion('template', [
   z.object({
     template: z.literal('sponsorships'),
     details: z.object({
-      tiers: z.array(z.object({ name: text, amount: text, perks: z.array(text) })),
+      tiers: z.array(z.object({ name: text, perks: z.array(text) })),
     }),
   }),
 ]);
