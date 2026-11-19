@@ -17,7 +17,7 @@ const sponsors = await getOrdered('sponsors');
         <h1>{copy.okanagan}<br />{copy.marineRobotics}<span>.</span></h1>
         <p class="hero-lead">{copy.wereAStudentLedTeam}</p>
         <div class="actions">
-          <a href={links.auv} class="btn btn-primary">{copy.exploreOurAuv} <span aria-hidden="true">↗</span></a>
+          <a href={links.auv} class="btn btn-primary">{copy.exploreOurAuv}</a>
           <a href={links.ourTeam} class="btn btn-secondary-dark">{copy.meetTheTeam}</a>
         </div>
       </div>
@@ -63,9 +63,7 @@ const sponsors = await getOrdered('sponsors');
               <p class="eyebrow">{project.subtitle}</p>
               <h3>{project.title}</h3>
               <p>{project.desc}</p>
-              <a href={project.link} class="text-link">
-                {project.label} <span aria-hidden="true">↗</span>
-              </a>
+              <a href={project.link} class="text-link">{project.label}</a>
             </div>
           </article>
         ))}
@@ -80,13 +78,13 @@ const sponsors = await getOrdered('sponsors');
       </div>
       <div class="feature-grid">
         {details.whyUs.map((item) => (
-          <article class="card feature-card">
+          <article class="feature-cell">
             <h3>{item.title}</h3>
             <p>{item.desc}</p>
           </article>
         ))}
       </div>
-      <a href={links.ourJourney} class="text-link section-link">{copy.readOurJourney} <span aria-hidden="true">↗</span></a>
+      <a href={links.ourJourney} class="text-link section-link">{copy.readOurJourney}</a>
     </div>
   </section>
 
@@ -103,7 +101,7 @@ const sponsors = await getOrdered('sponsors');
           </div>
         ))}
       </div>
-      <a href={links.sponsorships} class="text-link section-link">{copy.viewSponsorshipOpportunities} <span aria-hidden="true">↗</span></a>
+      <a href={links.sponsorships} class="text-link section-link">{copy.viewSponsorshipOpportunities}</a>
     </div>
   </section>
 
@@ -127,9 +125,9 @@ const sponsors = await getOrdered('sponsors');
         <h2 class="section-title">{copy.teamNewsletters}</h2>
         <p class="section-subtitle">{copy.buildMilestonesCompetitionRecapsAnd}</p>
       </div>
-      <div class="card-grid">
+      <div class="newsletter-list">
         {details.newsletters.map((newsletter) => (
-          <article class="card newsletter">
+          <article class="newsletter">
             <h3>{newsletter.title}</h3>
             <a href={newsletter.file} target="_blank" rel="noopener" class="text-link">{copy.readPdf} <span aria-hidden="true">↗</span></a>
           </article>

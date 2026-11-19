@@ -18,11 +18,11 @@ const siteConfig = await getSite();
         <div style="display: flex; flex-direction: column; gap: 20px;">
           <div class="card">
             <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
-              <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--ocean-tint); display: flex; align-items: center; justify-content: center; color: var(--ocean-blue);">
+              <div style="width: 44px; height: 44px; border-radius: var(--radius-sm); background: var(--ocean-tint); display: flex; align-items: center; justify-content: center; color: var(--ocean-blue);">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               </div>
               <div>
-                <div style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">{copy.directEmail}</div>
+                <div class="eyebrow" style="margin-bottom: 4px;">{copy.directEmail}</div>
                 <a href={'mailto:' + siteConfig.email} style="font-size: 1.15rem; font-weight: 700; color: var(--navy-deep);">
                   {siteConfig.email}
                 </a>
@@ -35,11 +35,11 @@ const siteConfig = await getSite();
 
           <div class="card">
             <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
-              <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--ocean-tint); display: flex; align-items: center; justify-content: center; color: var(--ocean-blue);">
+              <div style="width: 44px; height: 44px; border-radius: var(--radius-sm); background: var(--ocean-tint); display: flex; align-items: center; justify-content: center; color: var(--ocean-blue);">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               </div>
               <div>
-                <div style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">{copy.campusLocation}</div>
+                <div class="eyebrow" style="margin-bottom: 4px;">{copy.campusLocation}</div>
                 <div style="font-size: 1.15rem; font-weight: 700; color: var(--navy-deep);">
                   {copy.schoolOfEngineering}
                 </div>
@@ -52,7 +52,7 @@ const siteConfig = await getSite();
           </div>
 
           <div class="card">
-            <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 10px; text-transform: uppercase;">{copy.connectOnSocialMedia}</h3>
+            <h3 style="font-size: 1.25rem; margin-bottom: 10px;">{copy.connectOnSocialMedia}</h3>
             <p style="color: var(--text-body); font-size: 0.92rem; margin-bottom: 16px;">
               {copy.followOurTestingLogsCompetition}
             </p>
