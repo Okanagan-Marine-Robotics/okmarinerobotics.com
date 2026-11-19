@@ -241,6 +241,7 @@ h2.section-title { font-size: clamp(1.85rem, 4vw, 3.25rem); }
 .sponsorship-actions { margin-bottom: 32px; }
 .sponsorship-tiers { margin-bottom: clamp(38px, 7vw, 80px); }
 .tier-card { justify-content: space-between; }
+.tier-amount { color: var(--ocean-blue); font: 620 clamp(1.3rem, 3.2vw, 2rem)/1.2 var(--font-mono); letter-spacing: -.045em; margin-top: 10px; }
 .tier-perks { margin-block: 16px 24px; padding-left: 1.1em; font-size: .92rem; }
 .tier-perks li + li { margin-top: 6px; }
 .tier-perks li::marker { color: var(--ocean-blue); }
