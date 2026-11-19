@@ -1,0 +1,49 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { getSite, pagePath, type PageData } from '../lib/content';
+import '../style.css';
+
+interface Props {
+  page: PageData;
+}
+
+const { page } = Astro.props;
+const site = await getSite();
+const path = pagePath(page.id);
+const canonical = new URL(path, Astro.site);
+const title = path === '/' ? page.title : page.title + ' | ' + site.name;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" type="image/png" href={site.logo} />
+    <title>{title}</title>
+    <meta name="description" content={site.seo.description} />
+    <meta property="og:title" content={site.name} />
+    <meta property="og:description" content={site.seo.socialDescription} />
+    <meta property="og:type" content="website" />
+    {page.id === '404' ? (
+      <meta name="robots" content="noindex" />
+    ) : (
+      <>
+        <link rel="canonical" href={canonical.href} />
+        <meta property="og:url" content={canonical.href} />
+        <meta property="og:image" content={new URL(site.logo, canonical).href} />
+      </>
+    )}
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">{site.header.skipLink}</a>
+    <Header currentPath={path} />
+    <main id="main-content">
+      <slot />
+    </main>
+    <Footer />
+    <script src="../main.ts"></script>
+  </body>
+</html>

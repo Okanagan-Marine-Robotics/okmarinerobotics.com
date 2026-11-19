@@ -4,12 +4,19 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
   },
   "devDependencies": {
-    "typescript": "~6.0.2",
-    "vite": "^8.3.0"
+    "@astrojs/check": "0.9.12",
+    "typescript": "~6.0.2"
+  },
+  "dependencies": {
+    "astro": "7.4.13"
+  },
+  "engines": {
+    "node": ">=22.23.4"
   }
 }

@@ -1,0 +1,21 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { getPage } from '../lib/content';
+
+const page = await getPage('404');
+---
+
+<SiteLayout page={page}>
+  <section class="section not-found">
+    <div class="container">
+      {page.intro && (
+        <>
+          <span class="badge">{page.intro.eyebrow}</span>
+          <h1 class="section-title">{page.intro.heading}</h1>
+          <p class="section-subtitle">{page.intro.summary}</p>
+        </>
+      )}
+      <a class="btn btn-primary" href="/">{page.copy.backToHome}</a>
+    </div>
+  </section>
+</SiteLayout>

@@ -1,0 +1,10 @@
+{
+  "template": "standard",
+  "title": "Community Outreach",
+  "copy": {
+    "hostAStemWorkshop": "Host a STEM Workshop"
+  },
+  "links": {
+    "contactUs": "/contact-us"
+  }
+}

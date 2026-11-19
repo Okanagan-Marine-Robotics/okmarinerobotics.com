@@ -1,0 +1,58 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import { getPage } from '../lib/content';
+
+const page = await getPage('hydrofoil');
+const { copy, links } = page;
+---
+
+<SiteLayout page={page}>
+  <section class="section" style="padding-top: 50px; background: var(--bg-page);">
+    <div class="container">
+      <PageIntro intro={page.intro} />
+
+      <div class="card" style="padding: 0; overflow: hidden; margin-bottom: 50px;">
+        <img src={links.heroImage} alt={copy.hydrofoilProjectConceptAlt} style="width: 100%; max-height: 480px; object-fit: cover;" />
+        <div style="padding: 36px;">
+          <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 12px; text-transform: uppercase;">
+            {copy.nextHorizonHydrodynamicFlight}
+          </h2>
+          <p style="color: var(--text-body); font-size: 1.15rem; line-height: 1.8; margin-bottom: 24px;">
+            {copy.thisYearMarksTheExciting}
+          </p>
+          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            <a href={links.ourTeam} class="btn btn-primary">{copy.meetTheHydrofoilTeam}</a>
+            <a href={links.contactUs} class="btn btn-secondary">{copy.getInvolved}</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <span class="badge" style="width: fit-content; margin-bottom: 12px;">{copy.hydrodynamics}</span>
+          <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 10px; text-transform: uppercase;">{copy.foilAerofoilLiftProfile}</h3>
+          <p style="color: var(--text-body); line-height: 1.6;">
+            {copy.computationalFluidDynamicsCfdModeling}
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="badge" style="width: fit-content; margin-bottom: 12px;">{copy.compositeMaterials}</span>
+          <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 10px; text-transform: uppercase;">{copy.carbonFiberConstruction}</h3>
+          <p style="color: var(--text-body); line-height: 1.6;">
+            {copy.manufacturingVacuumInfusedCarbonFiber}
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="badge" style="width: fit-content; margin-bottom: 12px;">{copy.activeControl}</span>
+          <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 10px; text-transform: uppercase;">{copy.rideHeightPitchAutopilot}</h3>
+          <p style="color: var(--text-body); line-height: 1.6;">
+            {copy.integratingUltrasonicWaterClearanceSensors}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</SiteLayout>

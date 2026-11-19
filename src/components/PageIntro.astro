@@ -1,0 +1,17 @@
+---
+import type { PageData } from '../lib/content';
+
+interface Props {
+  intro: PageData['intro'];
+}
+
+const { intro } = Astro.props;
+---
+
+{intro && (
+  <div class="section-header">
+    {intro.eyebrow && <span class="badge">{intro.eyebrow}</span>}
+    <h1 class="section-title">{intro.heading}</h1>
+    <p class="section-subtitle">{intro.summary}</p>
+  </div>
+)}

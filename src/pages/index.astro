@@ -1,0 +1,156 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { getPage, getSite, getOrdered } from '../lib/content';
+
+const page = await getPage('index', 'home');
+const { copy, links, details } = page;
+const { stats } = details;
+const siteConfig = await getSite();
+const sponsors = await getOrdered('sponsors');
+---
+
+<SiteLayout page={page}>
+  <section class="hero">
+    <div class="container hero-layout">
+      <div class="hero-content">
+        <p class="eyebrow">{copy.ubcOkanaganEngineeringDesignTeam}</p>
+        <h1>{copy.okanagan}<br />{copy.marineRobotics}<span>.</span></h1>
+        <p class="hero-lead">{copy.wereAStudentLedTeam}</p>
+        <div class="actions">
+          <a href={links.auv} class="btn btn-primary">{copy.exploreOurAuv} <span aria-hidden="true">↗</span></a>
+          <a href={links.ourTeam} class="btn btn-secondary-dark">{copy.meetTheTeam}</a>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <img src={links.anOkanaganMarineRobotics} width="720" height="558" alt={copy.anOkanaganMarineRoboticsVehicleAlt} fetchpriority="high" />
+        <figcaption>{copy.auvPoolTesting}</figcaption>
+      </figure>
+      <dl class="hero-specs">
+        <div><dt>{copy.vehicle}</dt><dd>{copy.ogopogo}</dd></div>
+        <div><dt>{copy.propulsion}</dt><dd>{copy.value8Thrusters}</dd></div>
+        <div><dt>{copy.control}</dt><dd>{copy.value6DegreesOfFreedom}</dd></div>
+        <div><dt>{copy.autonomy}</dt><dd>{copy.ros2Humble}</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="stats-section" aria-labelledby="stats-title">
+    <div class="container stats-layout">
+      <h2 id="stats-title">{copy.ourYear}<br class="stats-break" /> {copy.inNumbers}</h2>
+      <dl class="stats-grid">
+        {stats.map(([value, label]) => (
+          <div class="stat-card">
+            <dt class="stat-label">{label}</dt>
+            <dd class="stat-value">{value}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="section section-white">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">{copy.currentProjects}</h2>
+      </div>
+      <div class="project-grid">
+        {details.projects.map((project) => (
+          <article class="project-card">
+            <div class="project-img-wrap">
+              <img src={project.image} alt="" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <p class="eyebrow">{project.subtitle}</p>
+              <h3>{project.title}</h3>
+              <p>{project.desc}</p>
+              <a href={project.link} class="text-link">
+                {project.label} <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">{copy.whyJoinOkmr}</h2>
+      </div>
+      <div class="feature-grid">
+        {details.whyUs.map((item) => (
+          <article class="card feature-card">
+            <h3>{item.title}</h3>
+            <p>{item.desc}</p>
+          </article>
+        ))}
+      </div>
+      <a href={links.ourJourney} class="text-link section-link">{copy.readOurJourney} <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+
+  <section class="section section-white">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">{copy.ourSponsors}</h2>
+        <p class="section-subtitle">{copy.ourTeamsSuccessIsMade}</p>
+      </div>
+      <div class="sponsors-grid">
+        {sponsors.filter(sponsor => sponsor.group !== 'software').map((sponsor) => (
+          <div class="sponsor-card">
+            <img src={sponsor.logo} alt={sponsor.name} loading="lazy" />
+          </div>
+        ))}
+      </div>
+      <a href={links.sponsorships} class="text-link section-link">{copy.viewSponsorshipOpportunities} <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+
+  <section class="section support-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">{copy.supportOurMission}</h2>
+        <p class="section-subtitle">{copy.taxDeductibleContributionsHelpUs} <strong>{siteConfig.donations.code}</strong>.</p>
+      </div>
+      <div class="actions">
+        <a href={siteConfig.donations.individual} target="_blank" rel="noopener" class="btn btn-primary">{copy.donateAsAnIndividual}</a>
+        <a href={siteConfig.donations.corporate} target="_blank" rel="noopener" class="btn btn-secondary-dark">{copy.corporateSponsorship}</a>
+        <a href={'mailto:' + siteConfig.email} class="btn btn-secondary-dark">{copy.emailTeamLeadership}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-white">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">{copy.teamNewsletters}</h2>
+        <p class="section-subtitle">{copy.buildMilestonesCompetitionRecapsAnd}</p>
+      </div>
+      <div class="card-grid">
+        {details.newsletters.map((newsletter) => (
+          <article class="card newsletter">
+            <h3>{newsletter.title}</h3>
+            <a href={newsletter.file} target="_blank" rel="noopener" class="text-link">{copy.readPdf} <span aria-hidden="true">↗</span></a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container faq-layout">
+      <div class="section-header">
+        <h2 class="section-title">{copy.frequentlyAskedQuestions}</h2>
+      </div>
+      <div class="faq-list">
+        {details.faqs.map((faq) => (
+          <details class="faq-item" name="team-questions">
+            <summary class="faq-question">{faq.q}<span class="faq-icon" aria-hidden="true">+</span></summary>
+            <p class="faq-answer">{faq.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+</SiteLayout>

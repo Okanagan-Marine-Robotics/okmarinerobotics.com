@@ -1,0 +1,53 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { getPage, getOrdered } from '../lib/content';
+
+const page = await getPage('outreach');
+const { copy, links } = page;
+const outreachData = await getOrdered('outreach');
+const defaultItem = outreachData[0];
+---
+
+<SiteLayout page={page}>
+  <section class="section" style="padding-top: 50px; background: var(--bg-page);">
+    <div class="container">
+
+
+      <div class="outreach-tabs" id="outreachTabs">
+        {outreachData.map((item, idx) => (
+          <button class:list={['outreach-tab-btn', { active: idx === 0 }]} type="button" aria-pressed={idx === 0 ? 'true' : 'false'} aria-controls="outreachActiveContent" data-image-one={item.img1} data-image-two={item.img2} data-subtitle={item.subtitle} data-description={item.desc}>
+            {item.title}
+          </button>
+        ))}
+      </div>
+
+      <div id="outreachActiveContent" style="max-width: 1000px; margin: 0 auto;">
+        <h1 class="outreach-display-title" id="outreachTitle">{defaultItem.title}</h1>
+
+        <div class="outreach-photos-frame">
+          <div class="outreach-photo-box">
+            <img id="outreachImg1" src={defaultItem.img1} alt={defaultItem.title} />
+          </div>
+          <div class="outreach-photo-box">
+            <img id="outreachImg2" src={defaultItem.img2} alt={defaultItem.title} />
+          </div>
+        </div>
+
+        <div class="card" style="margin-top: 24px; padding: 32px; text-align: center;">
+          <span class="badge" id="outreachSubtitle" style="margin-bottom: 12px; align-self: center;">
+            {defaultItem.subtitle}
+          </span>
+          <p id="outreachDesc" style="color: var(--text-body); font-size: 1.15rem; line-height: 1.8; max-width: 800px; margin: 0 auto 24px;">
+            {defaultItem.desc}
+          </p>
+          <div>
+            <a href={links.contactUs} class="btn btn-primary">
+              {copy.hostAStemWorkshop}
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</SiteLayout>

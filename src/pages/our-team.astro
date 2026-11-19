@@ -1,0 +1,54 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import { getOrdered, getPage } from '../lib/content';
+
+const page = await getPage('our-team', 'team');
+const { groups, memorial } = page.details;
+const team = await getOrdered('team');
+---
+
+<SiteLayout page={page}>
+  <section class="section">
+    <div class="container">
+      <PageIntro intro={page.intro} />
+
+      {Object.entries(groups).map(([group, title]) => (
+        <section class="team-group">
+          <h2 class="subsection-title">{title}</h2>
+          <div class="team-grid">
+            {team.filter(member => member.group === group).map(member => (
+              <article class="member-card">
+                <div class="member-img-wrap">
+                  {member.img ? (
+                    <img src={member.img} alt="" loading="lazy" />
+                  ) : (
+                    <div class="member-placeholder" aria-hidden="true">
+                      {member.name.split(/\s+/).map(word => word[0]).join('')}
+                    </div>
+                  )}
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">{member.name}</h3>
+                  <p class="member-role">{member.role}</p>
+                  {member.program && <p class="member-program">{member.program}</p>}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      ))}
+
+      <article class="memorial-card">
+        <div class="memorial-img-wrap">
+          <img src={memorial.img} alt={memorial.name} loading="lazy" />
+        </div>
+        <div>
+          <h2>{memorial.title}</h2>
+          <p class="memorial-role">{memorial.program} — {memorial.role}</p>
+          <p class="memorial-description">{memorial.description}</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</SiteLayout>

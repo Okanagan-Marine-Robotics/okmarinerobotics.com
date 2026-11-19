@@ -1,0 +1,21 @@
+{
+  "template": "standard",
+  "title": "Contact Us",
+  "copy": {
+    "directEmail": "Direct Email",
+    "ourExecutiveTeamMonitorsThis": "Our executive team monitors this inbox daily for business, media, and recruitment inquiries.",
+    "campusLocation": "Campus Location",
+    "schoolOfEngineering": "School of Engineering",
+    "connectOnSocialMedia": "Connect on Social Media",
+    "followOurTestingLogsCompetition": "Follow our testing logs, competition travel videos, and prototype builds in real-time.",
+    "instagramLabel": "Instagram",
+    "linkedinLabel": "LinkedIn",
+    "githubLabel": "GitHub",
+    "youtubeLabel": "YouTube"
+  },
+  "intro": {
+    "heading": "Contact Us",
+    "eyebrow": "Get in Touch",
+    "summary": "Have questions about joining, sponsorships, or our subsea robotics projects? Let's chat!"
+  }
+}

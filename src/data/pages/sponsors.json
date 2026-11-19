@@ -1,0 +1,22 @@
+{
+  "template": "standard",
+  "title": "Our Sponsors",
+  "copy": {
+    "platinumSponsors": "Platinum Sponsors",
+    "goldSponsors": "Gold Sponsors",
+    "silverSponsors": "Silver Sponsors",
+    "bronzeSponsors": "Bronze Sponsors",
+    "softwareSponsor": "Software Sponsor",
+    "interestedInPartneringWithUs": "Interested in Partnering With Us?",
+    "joinWorldClassSubseaEngineering": "Join world-class subsea engineering brands and support university robotics education while accessing top technical talent.",
+    "viewSponsorshipTierDeck": "View Sponsorship Tier Deck"
+  },
+  "links": {
+    "sponsorships": "/sponsorships"
+  },
+  "intro": {
+    "heading": "Our Sponsors",
+    "eyebrow": "Our Backers",
+    "summary": "We are immensely grateful to the organizations, companies, and grants powering our subsea robotics innovation."
+  }
+}

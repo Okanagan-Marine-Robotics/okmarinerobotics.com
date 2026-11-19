@@ -1,0 +1,31 @@
+{
+  "template": "standard",
+  "title": "RoboSub 2024",
+  "copy": {
+    "value15th": "15th",
+    "internationallyOutOf50Teams": "Internationally out of 50+ Teams",
+    "value3rd": "3rd",
+    "rankedTeamInCanada": "Ranked Team in Canada",
+    "semifinals": "Semifinals",
+    "advancedOnRookieDebut": "Advanced on Rookie Debut",
+    "value23Hours": "23 Hours",
+    "roadTripDriveToCalifornia": "Road Trip Drive to California",
+    "okanaganMarineRoboticsAtRobosubAlt": "Okanagan Marine Robotics at RoboSub 2024",
+    "fromKelownaToCalifornia": "From Kelowna to California",
+    "afterMonthsOfIntensePlanning": "After months of intense planning, late-night soldering, and 3D printing in campus makerspaces, we attended our first ever competition in August 2024. Six of our founding members made the 23-hour road trip down to Irvine to showcase our very first submarine,",
+    "cascade": "Cascade",
+    "cascadeSuccessfullyPassedInWater": "Cascade successfully passed in-water buoyancy inspections and autonomous gate transit, advancing to the global semifinals against experienced veteran teams from across North America, Europe, and Asia.",
+    "read2024TechnicalPaperPdf": "Read 2024 Technical Paper (PDF)",
+    "seeOur2025FollowUp": "See Our 2025 Follow-Up"
+  },
+  "links": {
+    "robosub2024TechnicalPaper": "/docs/RoboSub-2024-Technical-Paper.pdf",
+    "robosub2025": "/robosub-2025",
+    "heroImage": "/images/f0621d_7d1cf09c5504420f85a4b78_8872e33b3c.jpg"
+  },
+  "intro": {
+    "heading": "RoboSub 2024",
+    "eyebrow": "Inaugural Debut",
+    "summary": "Our rookie campaign in Irvine, California with our first-ever submarine: Cascade."
+  }
+}

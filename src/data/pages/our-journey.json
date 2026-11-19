@@ -1,0 +1,20 @@
+{
+  "template": "standard",
+  "title": "Our Journey",
+  "copy": {
+    "soWhereDidItAll": "So.. where did it all start? What started as an idea has become a movement of innovation and discovery. Together, we continue to explore new depths and redefine what’s possible in the water.",
+    "bePartOfOurNext": "Be Part of Our Next Chapter",
+    "whetherYouWantToBuild": "Whether you want to build autonomous perception algorithms, fabricate carbon composite hulls, or sponsor the next generation of engineers, we would love to have you.",
+    "meetOurMembers": "Meet Our Members",
+    "sponsorOurJourney": "Sponsor Our Journey"
+  },
+  "links": {
+    "ourTeam": "/our-team",
+    "sponsors": "/sponsors"
+  },
+  "intro": {
+    "heading": "Our Journey",
+    "eyebrow": "Milestones & Growth",
+    "summary": "What started as an idea has grown into an international contender and an inspiring community of innovators."
+  }
+}

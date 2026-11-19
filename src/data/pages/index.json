@@ -1,0 +1,146 @@
+{
+  "template": "home",
+  "title": "Okanagan Marine Robotics | UBC Okanagan Engineering Design Team",
+  "copy": {
+    "readPdf": "Read PDF",
+    "ubcOkanaganEngineeringDesignTeam": "UBC Okanagan Engineering Design Team",
+    "okanagan": "Okanagan",
+    "marineRobotics": "Marine Robotics",
+    "wereAStudentLedTeam": "We’re a student-led team designing, building, and testing autonomous underwater vehicles and hydrofoils at UBC Okanagan.",
+    "exploreOurAuv": "Explore our AUV",
+    "meetTheTeam": "Meet the team",
+    "anOkanaganMarineRoboticsVehicleAlt": "An Okanagan Marine Robotics vehicle submerged in a test pool",
+    "auvPoolTesting": "AUV pool testing",
+    "vehicle": "Vehicle",
+    "ogopogo": "Ogopogo",
+    "propulsion": "Propulsion",
+    "value8Thrusters": "8 thrusters",
+    "control": "Control",
+    "value6DegreesOfFreedom": "6 degrees of freedom",
+    "autonomy": "Autonomy",
+    "ros2Humble": "ROS 2 Humble",
+    "ourYear": "Our year",
+    "inNumbers": "in numbers",
+    "currentProjects": "Current projects",
+    "whyJoinOkmr": "Why join OKMR?",
+    "readOurJourney": "Read our journey",
+    "ourSponsors": "Our sponsors",
+    "ourTeamsSuccessIsMade": "Our team's success is made possible by industry partners and institutional grants.",
+    "viewSponsorshipOpportunities": "View sponsorship opportunities",
+    "supportOurMission": "Support our mission",
+    "taxDeductibleContributionsHelpUs": "Tax-deductible contributions help us purchase sensors, batteries, and thrusters, and send our team to competitions. You can also donate through UBC Giving using our team code",
+    "donateAsAnIndividual": "Donate as an individual",
+    "corporateSponsorship": "Corporate sponsorship",
+    "emailTeamLeadership": "Email team leadership",
+    "teamNewsletters": "Team newsletters",
+    "buildMilestonesCompetitionRecapsAnd": "Build milestones, competition recaps, and updates from our subteams.",
+    "frequentlyAskedQuestions": "Frequently asked questions"
+  },
+  "links": {
+    "auv": "/auv",
+    "ourTeam": "/our-team",
+    "anOkanaganMarineRobotics": "/images/f0621d_34da9addbeef4f358d82a49_a2efd9844f.jpg",
+    "ourJourney": "/our-journey",
+    "sponsorships": "/sponsorships"
+  },
+  "details": {
+    "stats": [
+      [
+        "$59,000",
+        "Funding acquired"
+      ],
+      [
+        "11th",
+        "Overall at RoboSub 2025, out of 58 teams"
+      ],
+      [
+        "2nd",
+        "Ranked team in Canada"
+      ],
+      [
+        "80+",
+        "Team members"
+      ]
+    ],
+    "projects": [
+      {
+        "title": "The AUV — Ogopogo",
+        "subtitle": "Autonomous Underwater Vehicle for RoboSub",
+        "desc": "Engineered to navigate complex submerged obstacle courses, identify underwater targets with computer vision, track acoustic pingers, and execute precise manipulation.",
+        "link": "/auv",
+        "image": "/images/f0621d_ad521d06bcb34a83843dba8_7125f3114c.jpg",
+        "label": "Explore Ogopogo"
+      },
+      {
+        "title": "The Hydrofoil",
+        "subtitle": "High-Efficiency Water Surface Craft",
+        "desc": "A new initiative tackling high-speed hydrodynamics, carbon-composite wing foils, dynamic lift control, and marine boundary layer physics.",
+        "link": "/hydrofoil",
+        "image": "/images/11C89DD6-862A-4788-BB88-BC096E_f7ef30bc84.jpeg",
+        "label": "Explore the hydrofoil"
+      }
+    ],
+    "whyUs": [
+      {
+        "title": "Autonomous Innovation",
+        "desc": "The fastest growing and most innovative engineering design team at UBC Okanagan; the only team working on autonomous subsea robotics technology."
+      },
+      {
+        "title": "Full-Stack Engineering",
+        "desc": "From custom multi-layer PCB design and deep learning computer vision to hydrodynamic hull simulation, our members build industry-grade subsea systems."
+      },
+      {
+        "title": "Collaborative Culture",
+        "desc": "Fueled by deep curiosity and rigorous collaboration. Every member contributes directly to competition vehicles and mission-critical hardware."
+      },
+      {
+        "title": "World-Class Mentorship",
+        "desc": "Partnered with premier marine defense and subsea technology leaders like Cellula Robotics and Blue Trail Engineering for hands-on mentorship."
+      }
+    ],
+    "newsletters": [
+      {
+        "title": "September 2024 - Competition Summary",
+        "file": "/docs/September-2024-Competition-Summary.pdf"
+      },
+      {
+        "title": "January 2025 - 2024 End of Year!",
+        "file": "/docs/January-2025-End-of-Year.pdf"
+      },
+      {
+        "title": "July & August 2025 - Competition Summary",
+        "file": "/docs/July-August-2025-Competition-Summary.pdf"
+      },
+      {
+        "title": "Winter Term 1 2025",
+        "file": "/docs/Winter-Term-1-2025.pdf"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Why Marine Robotics?",
+        "a": "The Marine Robotics Team provides the unique opportunity to work with cutting-edge technology and a passionate multidisciplinary team. It allows you to gain real-world design, fabrication, and testing experience while building connections with leading subsea industry professionals."
+      },
+      {
+        "q": "Do I need to have experience to join?",
+        "a": "No prior robotics experience is required! We welcome eager learners. We provide mentorship, workshops, and hands-on projects so anyone with enthusiasm can develop their technical skills."
+      },
+      {
+        "q": "What if I'm not an Engineering student?",
+        "a": "We welcome students from all faculties! In addition to electrical, mechanical, and computer engineering, our team relies on computer science, management, finance, physics, psychology, and media students."
+      },
+      {
+        "q": "What is the time commitment?",
+        "a": "Typical commitment ranges from 3 to 10 hours per week depending on your role, subteam, and competition deadlines. We are flexible, so you can commit as many or as few hours as you want."
+      },
+      {
+        "q": "What is the most important thing I should know before joining?",
+        "a": "Curiosity, consistency, and a desire to collaborate are the keys to success on our team. We love initiative and proactive problem solvers!"
+      },
+      {
+        "q": "How do I join?",
+        "a": "You can apply during our fall and winter recruitment cycles through our linktree or send an email directly to okmarinerobotics@gmail.com with your interests!"
+      }
+    ]
+  }
+}

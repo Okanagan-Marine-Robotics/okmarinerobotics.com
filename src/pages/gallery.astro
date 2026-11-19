@@ -1,0 +1,30 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import { getPage, getOrdered } from '../lib/content';
+
+const page = await getPage('gallery');
+const { copy } = page;
+const galleryData = await getOrdered('photos');
+---
+
+<SiteLayout page={page}>
+  <section class="section" style="padding-top: 50px; background: var(--bg-page);">
+    <div class="container">
+      <PageIntro intro={page.intro} />
+
+      <div class="gallery-grid">
+        {galleryData.map((photo) => (
+          <a class="gallery-item" href={photo.src}>
+            <img src={photo.src} alt={photo.alt} loading="lazy" />
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <dialog class="lightbox-modal" id="lightboxModal" aria-label={copy.galleryPhotoLabel}>
+    <form method="dialog"><button class="lightbox-close" aria-label={copy.closePhotoLabel}>{copy.times}</button></form>
+    <img alt="" class="lightbox-img" />
+  </dialog>
+</SiteLayout>

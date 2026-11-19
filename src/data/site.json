@@ -1,0 +1,205 @@
+{
+  "settings": {
+    "name": "Okanagan Marine Robotics",
+    "tagline": "Crafting the Future of Marine Design & Autonomous Robotics",
+    "institution": "University of British Columbia, Okanagan",
+    "email": "okmarinerobotics@gmail.com",
+    "address": "3333 University Way, Kelowna, BC V1V 1V7",
+    "logo": "/images/logo.png",
+    "socials": {
+      "instagram": "https://www.instagram.com/okmarinerobotics/",
+      "linkedin": "https://www.linkedin.com/company/okanagan-marine-robotics/",
+      "github": "https://github.com/Okanagan-Marine-Robotics",
+      "youtube": "https://www.youtube.com/@okmarinerobotics"
+    },
+    "donations": {
+      "individual": "https://donate.give.ubc.ca/page/68045/donate/1?transaction.dirgift=UBC%20Okanagan%20School%20of%20Engineering%20Marine%20Robotics%20Club%20G4367",
+      "corporate": "https://donate.give.ubc.ca/page/80953/donate/1?locale=en-US",
+      "code": "G4367"
+    },
+    "landAcknowledgment": "Okanagan Marine Robotics respectfully acknowledges that we learn and operate on the traditional, ancestral, unceded territory of the Syilx Okanagan Nation.",
+    "footer": {
+      "brandName": "OKANAGAN MARINE ROBOTICS",
+      "socialLabels": {
+        "instagram": "Instagram",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "youtube": "YouTube"
+      },
+      "linkGroups": [
+        {
+          "heading": "Navigation",
+          "links": [
+            {
+              "label": "Home",
+              "path": "/"
+            },
+            {
+              "label": "Our Team",
+              "path": "/our-team"
+            },
+            {
+              "label": "Our Journey",
+              "path": "/our-journey"
+            },
+            {
+              "label": "Gallery",
+              "path": "/gallery"
+            },
+            {
+              "label": "STEM Outreach",
+              "path": "/outreach"
+            },
+            {
+              "label": "Contact Us",
+              "path": "/contact-us"
+            }
+          ]
+        },
+        {
+          "heading": "Robotics & Projects",
+          "links": [
+            {
+              "label": "AUV Overview",
+              "path": "/auv"
+            },
+            {
+              "label": "AUV Mechanical",
+              "path": "/auv-mechanical"
+            },
+            {
+              "label": "AUV Electrical",
+              "path": "/auv-electrical"
+            },
+            {
+              "label": "AUV Software",
+              "path": "/auv-software"
+            },
+            {
+              "label": "Hydrofoil Project",
+              "path": "/hydrofoil"
+            },
+            {
+              "label": "RoboSub 2025",
+              "path": "/robosub-2025"
+            }
+          ]
+        }
+      ],
+      "mentorsHeading": "Our Mentors",
+      "mentors": [
+        {
+          "name": "Dr. Rudolf Seethaler",
+          "organization": "University of British Columbia"
+        },
+        {
+          "name": "Grant Topor",
+          "organization": "University of British Columbia"
+        },
+        {
+          "name": "Eric Jackson",
+          "organization": "Cellula Robotics"
+        },
+        {
+          "name": "Tristan Crees",
+          "organization": "Banksia Robotics"
+        }
+      ],
+      "copyright": "©",
+      "allRightsReserved": ". All rights reserved."
+    },
+    "nav": [
+      {
+        "label": "Home",
+        "path": "/"
+      },
+      {
+        "label": "About",
+        "children": [
+          {
+            "label": "Our Team",
+            "path": "/our-team"
+          },
+          {
+            "label": "Our Journey",
+            "path": "/our-journey"
+          },
+          {
+            "label": "Gallery",
+            "path": "/gallery"
+          }
+        ]
+      },
+      {
+        "label": "AUV",
+        "children": [
+          {
+            "label": "AUV Overview",
+            "path": "/auv"
+          },
+          {
+            "label": "Electrical",
+            "path": "/auv-electrical"
+          },
+          {
+            "label": "Mechanical",
+            "path": "/auv-mechanical"
+          },
+          {
+            "label": "Software",
+            "path": "/auv-software"
+          }
+        ]
+      },
+      {
+        "label": "Hydrofoil",
+        "path": "/hydrofoil"
+      },
+      {
+        "label": "Outreach",
+        "path": "/outreach"
+      },
+      {
+        "label": "Competitions",
+        "children": [
+          {
+            "label": "RoboSub 2025",
+            "path": "/robosub-2025"
+          },
+          {
+            "label": "RoboSub 2024",
+            "path": "/robosub-2024"
+          }
+        ]
+      },
+      {
+        "label": "Sponsors",
+        "children": [
+          {
+            "label": "Our Sponsors",
+            "path": "/sponsors"
+          },
+          {
+            "label": "Sponsorship Packages",
+            "path": "/sponsorships"
+          }
+        ]
+      },
+      {
+        "label": "Contact Us",
+        "path": "/contact-us",
+        "isCta": true
+      }
+    ],
+    "seo": {
+      "description": "A student-led marine engineering and robotics design team at UBC Okanagan. Competing globally at RoboSub.",
+      "socialDescription": "A student-led marine engineering and robotics design team at UBC Okanagan."
+    },
+    "header": {
+      "affiliation": "UBC Okanagan",
+      "menuLabel": "Navigation menu",
+      "navigationLabel": "Main navigation",
+      "skipLink": "Skip to content"
+    }
+  }
+}

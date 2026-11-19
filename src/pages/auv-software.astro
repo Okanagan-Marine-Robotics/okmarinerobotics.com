@@ -1,0 +1,112 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import { getPage } from '../lib/content';
+
+const page = await getPage('auv-software', 'software');
+const { copy, links, details } = page;
+const { teamRoster } = details;
+---
+
+<SiteLayout page={page}>
+  <section class="section" style="padding-top: 50px; background: var(--bg-page);">
+    <div class="container">
+      <PageIntro intro={page.intro} />
+
+      <div class="card" style="margin-bottom: 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+        <div>
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 4px; text-transform: uppercase;">{copy.softwareSubteamRoster}</h3>
+          <p style="color: var(--text-body);">{teamRoster}</p>
+        </div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href={links.githubRepository} target="_blank" rel="noopener" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.95rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            {copy.githubRepository}
+          </a>
+          <a href={links.softwareDocumentation} target="_blank" rel="noopener" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.95rem;">
+            {copy.softwareDocs}
+          </a>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom: 50px;">
+        <span class="badge" style="width: fit-content; margin-bottom: 12px;">{copy.systemArchitecture}</span>
+        <h2 style="font-size: 2rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 14px; text-transform: uppercase;">{copy.value5TierControlHierarchy}</h2>
+        <p style="color: var(--text-body); font-size: 1.05rem; line-height: 1.8; margin-bottom: 24px;">
+          {copy.ourSoftwareStackIsOrganized}
+        </p>
+        <div style="background: var(--diagram-surface); border-radius: var(--radius-md); padding: 24px; text-align: center; border: 1px solid var(--border-color); margin-bottom: 24px;">
+          <img src={links.ros2SoftwareSystemArchitecture} alt={copy.ros2SoftwareSystemArchitectureDiagramAlt} style="max-height: 380px; margin: 0 auto; object-fit: contain;" />
+        </div>
+        <div class="technical-grid">
+          <div class="technical-panel">
+            <div class="technical-value">{copy.l5Planning}</div>
+            <p style="color: var(--text-body); font-size: 0.9rem; margin-top: 6px;">{copy.executiveMissionLogicQualificationTask}</p>
+          </div>
+          <div class="technical-panel">
+            <div class="technical-value">{copy.l4Perception}</div>
+            <p style="color: var(--text-body); font-size: 0.9rem; margin-top: 6px;">{copy.yolov8TargetDetectionOpencvColor}</p>
+          </div>
+          <div class="technical-panel">
+            <div class="technical-value">{copy.l3Navigation}</div>
+            <p style="color: var(--text-body); font-size: 0.9rem; margin-top: 6px;">{copy.stateEstimationExtendedKalmanFilter}</p>
+          </div>
+          <div class="technical-panel">
+            <div class="technical-value">{copy.l2Execution}</div>
+            <p style="color: var(--text-body); font-size: 0.9rem; margin-top: 6px;">{copy.pidPositionVelocityLoopsAnd}</p>
+          </div>
+          <div class="technical-panel">
+            <div class="technical-value">{copy.l1Hardware}</div>
+            <p style="color: var(--text-body); font-size: 0.9rem; margin-top: 6px;">{copy.stm32MicrocontrollerDriversSerialMicro}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <span class="badge" style="width: fit-content; margin-bottom: 12px;">{copy.computerVision}</span>
+          <h3 style="font-size: 1.45rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 10px; text-transform: uppercase;">{copy.yolov8OpencvPipeline}</h3>
+          <p style="color: var(--text-body); line-height: 1.6; margin-bottom: 16px;">
+            {copy.trainedOnHundredsOfSynthetic}
+          </p>
+          <div style="background: var(--diagram-surface); border-radius: var(--radius-sm); padding: 12px; text-align: center; border: 1px solid var(--border-color); margin-top: auto;">
+            <img src={links.opencvObjectDetection} alt={copy.opencvObjectDetectionAlt} style="max-height: 180px; margin: 0 auto; object-fit: contain;" />
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="badge" style="width: fit-content; margin-bottom: 12px;">{copy.missionLogic}</span>
+          <h3 style="font-size: 1.45rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 10px; text-transform: uppercase;">{copy.behaviorTreePlanner}</h3>
+          <p style="color: var(--text-body); line-height: 1.6; margin-bottom: 16px;">
+            {copy.ourAutomatedPlanningSystemRelies}
+          </p>
+          <div style="background: var(--diagram-surface); border-radius: var(--radius-sm); padding: 12px; text-align: center; border: 1px solid var(--border-color); margin-top: auto;">
+            <img src={links.behaviorTreeMissionPlanner} alt={copy.behaviorTreeMissionPlannerAlt} style="max-height: 180px; margin: 0 auto; object-fit: contain;" />
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="badge" style="width: fit-content; margin-bottom: 12px;">{copy.acousticLocalization}</span>
+          <h3 style="font-size: 1.45rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 10px; text-transform: uppercase;">{copy.hydrophoneTdoaProcessing}</h3>
+          <p style="color: var(--text-body); line-height: 1.6; margin-bottom: 16px;">
+            {copy.toLocateTheUnderwaterAcoustic}
+          </p>
+          <div style="background: var(--diagram-surface); border-radius: var(--radius-sm); padding: 12px; text-align: center; border: 1px solid var(--border-color); margin-top: auto;">
+            <img src={links.acousticSignalProcessing} alt={copy.acousticSignalProcessingAlt} style="max-height: 180px; margin: 0 auto; object-fit: contain;" />
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="badge" style="width: fit-content; margin-bottom: 12px;">{copy.digitalTwin}</span>
+          <h3 style="font-size: 1.45rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 10px; text-transform: uppercase;">{copy.stonefishSubseaSimulation}</h3>
+          <p style="color: var(--text-body); line-height: 1.6; margin-bottom: 16px;">
+            {copy.weReplicateCompetitionOceanDynamics}
+          </p>
+          <div style="background: var(--diagram-surface); border-radius: var(--radius-sm); padding: 12px; text-align: center; border: 1px solid var(--border-color); margin-top: auto;">
+            <img src={links.stonefishSubseaSimulatorAlongside} width="567" height="296" loading="lazy" alt={copy.stonefishSubseaSimulatorAlongsideTheAlt} style="max-height: 180px; margin: 0 auto; object-fit: contain;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</SiteLayout>

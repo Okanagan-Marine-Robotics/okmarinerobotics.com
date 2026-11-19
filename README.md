@@ -1,85 +1,33 @@
-# Okanagan Marine Robotics (OKMR)
+# Okanagan Marine Robotics
 
-Website **Okanagan Marine Robotics** at the University of British Columbia, Okanagan.
+Website for the student-led engineering design team at UBC Okanagan.
 
----
+## Local development
 
-## Quick Start
+Use the Node version in .nvmrc and install dependencies with npm.
 
-### 1. Start Local Development Server
-```bash
+~~~sh
 npm ci
 npm run dev
-```
-Open **[http://localhost:5173](http://localhost:5173)** in your browser.
+~~~
 
-### 2. Build for Production
-```bash
-npm run build
-```
-Creates an optimized, minified production build in `dist/`.
+Astro serves the site at http://localhost:4321 by default. Run **npm run check** to validate content and types, **npm run build** to produce the static site in dist/, and **npm run preview** to serve the build locally.
 
-### 3. Preview Production Build
-```bash
-npm run preview
-```
+## Edit content
 
-A production build generates one HTML document per route, plus `404.html`, `sitemap.xml`, and `robots.txt`. Add new pages to the route table in `src/site.ts` so the build includes them in the sitemap. Vercel serves extensionless paths and uses the custom 404 page for unknown routes.
+Astro Content Collections load and validate the JSON files in src/data/ using the schemas in src/content.config.ts. Edit content there and use the Astro files in src/pages/ and src/components/ for layout changes.
 
-Vercel revalidates HTML by default. The cache policy in `vercel.json` gives fingerprinted JS, CSS, and fonts one year of immutable caching. Images and downloadable documents revalidate after one day.
+| Content | Location |
+| --- | --- |
+| Site identity, navigation, footer, donations, and default SEO metadata | src/data/site.json |
+| Page copy, media references, and links | src/data/pages/ |
+| Homepage stats, projects, FAQs, and newsletters | src/data/pages/index.json |
+| Team roster, sponsors, milestones, photos, and outreach entries | src/data/team/, src/data/sponsors/, src/data/milestones/, src/data/photos/, src/data/outreach/ |
 
----
+For ordered collections, add one JSON file per entry and set its **order** field to control display order. For a team member with no confirmed portrait, omit **img** to display their initials. Put public images and PDFs in public/images/ and public/docs/ and reference them as /images/… and /docs/….
 
-## Project Architecture & Pages
+When adding a route, pair the Astro page in src/pages/ with a JSON entry of the same name in src/data/pages/. The sitemap uses the collection IDs and excludes the 404 page.
 
-```
-├── public/
-│   ├── images/          # 221 local high-res photos, logos, PCB schematics, and renders
-│   └── docs/            # 7 competition summaries, newsletters, and technical papers (PDFs)
-├── src/
-│   ├── components/
-│   │   ├── Header.ts    
-│   │   └── Footer.ts    
-│   ├── data/
-│   │   └── siteData.ts  # Centralized editable data (Team roster, sponsors, stats, FAQs, etc.)
-│   ├── pages/
-│   ├── style.css        
-│   ├── main.ts          # Browser interactions
-│   └── site.ts          # Route table, HTML rendering, and sitemap
-├── index.html           # Shared HTML shell
-├── vite.config.ts       # Static page generation and local route handling
-└── package.json
-```
+## Hosting
 
----
-
-## How to Edit Content
-
-All team members, milestones, sponsors, FAQs, and links are neatly organized in:
-**`src/data/siteData.ts`**
-
-### Add or Update a Team Member
-Open `src/data/siteData.ts` and modify the `executives`, `management`, or `subteamLeads` array:
-```typescript
-{
-  name: 'New Member',
-  role: 'Controls Lead',
-  program: 'BASc Electrical Engineering',
-  img: '/images/photo.jpg'
-}
-```
-Use an empty `img` value if a team member has no confirmed portrait. The card will display their initials.
-
-### Add a New Sponsor
-Open `src/data/siteData.ts` and add them to `sponsorsData.platinum`, `gold`, `silver`, or `bronze`:
-```typescript
-{
-  name: 'Sponsor Name',
-  tier: 'Platinum Sponsor',
-  logo: '/images/sponsor_logo.png',
-  desc: 'Company description...'
-}
-```
-
-### Update FAQs or Newsletters
-Edit the `faqs` and `newsletters` arrays directly in `src/data/siteData.ts`.
+The static build includes canonical URLs, a sitemap, robots.txt, and a custom 404 page. Vercel serves extensionless paths and revalidates HTML by default. The rules in vercel.json cache fingerprinted Astro assets for one year and revalidate public images and documents after one day.

@@ -1,0 +1,53 @@
+{
+  "template": "subsystem",
+  "title": "AUV Electrical",
+  "intro": {
+    "heading": "AUV Electrical Engineering",
+    "eyebrow": "AUV Subsystems",
+    "summary": "Custom multi-layer PCB designs, embedded STM32 firmware, and subsea power architecture."
+  },
+  "details": {
+    "teamHeading": "AUV Electrical Subteam",
+    "teamPhotoAlt": "AUV Electrical Subteam",
+    "teamPhoto": "/images/f0621d_484532f63a75403986c6ae8_8463546e62.jpg",
+    "subteamMembers": "Left to right: Gabe Piano, Seth Richard, Sachin Kumar, Maggie Wu, James Williamson, Rhea Deshpande, Yatin Gour, Aras Jahangiri, Kyle Lee, Jovan Sohi, Malachy Frey, Adam Teodosio, David Manhart, Hasan Mohammad. Not pictured: Salman Amin, Saim Hajini, Antoine Godin, Reid Pratley.",
+    "modules": [
+      {
+        "title": "Main MCU",
+        "badge": "Compute & Real-Time Control",
+        "img": "/images/MainMCU_55ed335599.png",
+        "desc": "The onboard control system was redesigned by replacing the previous ESP32 with an STM32F7 standalone microcontroller. The high-performance ARM Cortex-M7 core provides hardware floating point processing, abundant DMA streams, and dedicated timers for real-time sensor polling and thruster PWM allocation."
+      },
+      {
+        "title": "Actuator Board",
+        "badge": "Servos & Mechanism Triggers",
+        "img": "/images/ActuatorBoard_8a06b2081c.png",
+        "desc": "The Actuator Board controls all the servos on board the submarine. It allows each servo to be controlled independently and provides optical isolation to prevent electrical interference from high-current thrusters and solenoid surges from feeding back into sensitive microcontrollers."
+      },
+      {
+        "title": "Power Distribution Board (PDB)",
+        "badge": "High-Current Subsea Power",
+        "img": "/images/f0621d_e880175a54fe4d648d9a219_459fa78ae3.png",
+        "desc": "Engineered to deliver clean regulated voltages (16V, 12V, 5V, 3.3V) across high-draw subsea brushless thrusters, compute modules, and acoustic electronics. Built with integrated current/voltage sensing for real-time telemetry."
+      },
+      {
+        "title": "Magnetic Kill Switch",
+        "badge": "Safety & Emergency Shutdown",
+        "img": "/images/f0621d_9d08029334a54da7ac8462d_a3cb1804d3.png",
+        "desc": "A competition-mandated fail-safe that cuts primary battery power cleanly. Designed with a robust magnetic reed / hall latch mechanism completely sealed inside our waterproof enclosure."
+      },
+      {
+        "title": "Battery Management System (BMS)",
+        "badge": "Lithium Chemistry Safety",
+        "img": "/images/BMS_09cbda32d5.jpg",
+        "desc": "Custom multi-cell monitoring circuitry providing active cell balancing, over-current cutoffs, under-voltage protection, and precision thermal sensors attached directly to high-capacity LiPo packs."
+      },
+      {
+        "title": "Acoustic Hydrophone Pinger",
+        "badge": "Subsea Acoustic Localization",
+        "img": "/images/pinger_a8a32e6578.jpg",
+        "desc": "High-frequency subsea acoustic receivers paired with precision analog front-end bandpass filtering and preamplifiers to localize underwater acoustic beacons via microsecond-level Time Difference of Arrival (TDoA)."
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SubsystemPage from '../components/SubsystemPage.astro';
+import { getPage } from '../lib/content';
+
+const page = await getPage('auv-mechanical', 'subsystem');
+---
+
+<SiteLayout page={page}>
+  <SubsystemPage page={page} />
+</SiteLayout>

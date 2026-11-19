@@ -1,0 +1,12 @@
+{
+  "template": "standard",
+  "title": "Page Not Found",
+  "intro": {
+    "eyebrow": "HTTP 404",
+    "heading": "Page not found",
+    "summary": "The page you requested may have moved or been removed."
+  },
+  "copy": {
+    "backToHome": "Back to home"
+  }
+}

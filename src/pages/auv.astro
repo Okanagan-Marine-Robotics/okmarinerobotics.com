@@ -1,0 +1,84 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import { getPage } from '../lib/content';
+
+const page = await getPage('auv');
+const { copy, links } = page;
+---
+
+<SiteLayout page={page}>
+  <section class="section" style="padding-top: 50px; background: var(--bg-page);">
+    <div class="container">
+      <PageIntro intro={page.intro} />
+
+      <div class="card" style="padding: 0; overflow: hidden; margin-bottom: 50px;">
+        <img src={links.poolTestingImage} alt={copy.ogopogoSubmergedInTestingPoolAlt} style="width: 100%; max-height: 480px; object-fit: cover;" />
+        <div style="padding: clamp(16px, 4vw, 36px);">
+          <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 12px; text-transform: uppercase;">
+            {copy.nextGenerationSubseaAutonomy}
+          </h2>
+          <p style="color: var(--text-body); font-size: 1.1rem; line-height: 1.8; margin-bottom: 24px;">
+            {copy.ogopogoIsATrueTeam}
+          </p>
+          <div class="technical-grid" style="padding-top: 20px; border-top: 1px solid var(--border-color);">
+            <div>
+              <div class="technical-value">{copy.value8Thrusters}</div>
+              <div style="color: var(--text-muted); font-size: 0.9rem;">{copy.value6DofFullHolonomicControl}</div>
+            </div>
+            <div>
+              <div class="technical-value">{copy.stm32f7Mcu}</div>
+              <div style="color: var(--text-muted); font-size: 0.9rem;">{copy.customEmbeddedElectronics}</div>
+            </div>
+            <div>
+              <div class="technical-value">{copy.ros2Middleware}</div>
+              <div style="color: var(--text-muted); font-size: 0.9rem;">{copy.humbleRoboticsArchitecture}</div>
+            </div>
+            <div>
+              <div class="technical-value">{copy.yolov8Vision}</div>
+              <div style="color: var(--text-muted); font-size: 0.9rem;">{copy.realTimeSubseaPerception}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="font-size: 2rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 28px; text-align: center; text-transform: uppercase;">
+        {copy.exploreTheSubsystems}
+      </h2>
+      <div class="card-grid">
+        <div class="card">
+          <span class="badge" style="width: fit-content; margin-bottom: 12px;">{copy.mechanical}</span>
+          <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 10px; text-transform: uppercase;">{copy.mechanicalEngineering}</h3>
+          <p style="color: var(--text-body); margin-bottom: 24px; line-height: 1.6;">
+            {copy.modularAluminumChassisWaterproofAcrylic}
+          </p>
+          <a href={links.auvMechanical} class="btn btn-primary" style="margin-top: auto;">
+            {copy.viewMechanical}
+          </a>
+        </div>
+
+        <div class="card">
+          <span class="badge" style="width: fit-content; margin-bottom: 12px;">{copy.electrical}</span>
+          <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 10px; text-transform: uppercase;">{copy.electricalEngineering}</h3>
+          <p style="color: var(--text-body); margin-bottom: 24px; line-height: 1.6;">
+            {copy.redesignedStm32f7StandaloneMcuDedicated}
+          </p>
+          <a href={links.auvElectrical} class="btn btn-primary" style="margin-top: auto;">
+            {copy.viewElectrical}
+          </a>
+        </div>
+
+        <div class="card">
+          <span class="badge" style="width: fit-content; margin-bottom: 12px;">{copy.software}</span>
+          <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 10px; text-transform: uppercase;">{copy.softwareAutonomy}</h3>
+          <p style="color: var(--text-body); margin-bottom: 24px; line-height: 1.6;">
+            {copy.layered5TierControlHierarchy}
+          </p>
+          <a href={links.auvSoftware} class="btn btn-primary" style="margin-top: auto;">
+            {copy.viewSoftware}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</SiteLayout>

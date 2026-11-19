@@ -1,0 +1,41 @@
+{
+  "template": "standard",
+  "title": "The AUV Ogopogo",
+  "copy": {
+    "ogopogoSubmergedInTestingPoolAlt": "Ogopogo submerged in testing pool",
+    "nextGenerationSubseaAutonomy": "Next-Generation Subsea Autonomy",
+    "ogopogoIsATrueTeam": "Ogopogo is a true team effort that will continue to evolve moving toward RoboSub 2026. Each improvement builds on what we've learned from previous challenges, testing sessions at the Kelowna Family YMCA, and judge feedback in California.",
+    "value8Thrusters": "8 Thrusters",
+    "value6DofFullHolonomicControl": "6-DOF Full Holonomic Control",
+    "stm32f7Mcu": "STM32F7 MCU",
+    "customEmbeddedElectronics": "Custom Embedded Electronics",
+    "ros2Middleware": "ROS2 Middleware",
+    "humbleRoboticsArchitecture": "Humble Robotics Architecture",
+    "yolov8Vision": "YOLOv8 Vision",
+    "realTimeSubseaPerception": "Real-Time Subsea Perception",
+    "exploreTheSubsystems": "Explore The Subsystems",
+    "mechanical": "Mechanical",
+    "mechanicalEngineering": "Mechanical Engineering",
+    "modularAluminumChassisWaterproofAcrylic": "Modular aluminum chassis, waterproof acrylic pressure hull, custom modular battery enclosure, internal electronics sliding tray, pneumatic torpedo and dropper actuators.",
+    "viewMechanical": "View Mechanical",
+    "electrical": "Electrical",
+    "electricalEngineering": "Electrical Engineering",
+    "redesignedStm32f7StandaloneMcuDedicated": "Redesigned STM32F7 standalone MCU, dedicated Actuator Board, heavy-duty Power Distribution Board (PDB), magnetic kill switch, custom Battery Management System (BMS), and subsea acoustic hydrophones.",
+    "viewElectrical": "View Electrical",
+    "software": "Software",
+    "softwareAutonomy": "Software & Autonomy",
+    "layered5TierControlHierarchy": "Layered 5-tier control hierarchy, ROS2 nodes, automated state machine mission planner, OpenCV & YOLOv8 perception, acoustic time-difference-of-arrival (TDoA) localization, and Stonefish simulation.",
+    "viewSoftware": "View Software"
+  },
+  "links": {
+    "auvMechanical": "/auv-mechanical",
+    "auvElectrical": "/auv-electrical",
+    "auvSoftware": "/auv-software",
+    "poolTestingImage": "/images/IMG_6937_ed835537a9.jpg"
+  },
+  "intro": {
+    "heading": "The AUV — Ogopogo",
+    "eyebrow": "RoboSub Competition Vehicle",
+    "summary": "Say hello to Ogopogo, our second-generation autonomous underwater vehicle built for RoboSub in California."
+  }
+}

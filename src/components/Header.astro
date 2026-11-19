@@ -1,0 +1,48 @@
+---
+import { getSite } from '../lib/content';
+
+const site = await getSite();
+const { currentPath } = Astro.props;
+
+interface Props {
+  currentPath: string;
+}
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="brand-logo">
+      <img src={site.logo} alt="" width="42" height="42" />
+      <div>
+        <div class="brand-name">{site.name}</div>
+        <div class="brand-sub">{site.header.affiliation}</div>
+      </div>
+    </a>
+    <button class="mobile-toggle" id="mobileMenuBtn" type="button" aria-controls="navMenu" aria-expanded="false" aria-label={site.header.menuLabel}>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav id="navMenu" class="site-nav" aria-label={site.header.navigationLabel}>
+      <ul class="nav-menu">
+        {site.nav.map(item => (
+          <li>
+            {'children' in item ? (
+              <details class="nav-group">
+                <summary class:list={['nav-link', { active: item.children.some(child => child.path === currentPath) }]}>
+                  {item.label}
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </summary>
+                <ul class="nav-dropdown">
+                  {item.children.map(child => (
+                    <li><a href={child.path} class="dropdown-link" aria-current={child.path === currentPath ? 'page' : undefined}>{child.label}</a></li>
+                  ))}
+                </ul>
+              </details>
+            ) : (
+              <a href={item.path} class={item.isCta ? 'btn nav-cta' : 'nav-link'} aria-current={item.path === currentPath ? 'page' : undefined}>{item.label}</a>
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>

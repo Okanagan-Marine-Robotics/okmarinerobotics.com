@@ -1,6 +1,3 @@
-import './style.css';
-import { outreachData } from './data/siteData.ts';
-
 const header = document.querySelector<HTMLElement>('.site-header');
 const toggle = document.querySelector<HTMLButtonElement>('#mobileMenuBtn');
 const groups = document.querySelectorAll<HTMLDetailsElement>('.nav-group');
@@ -54,25 +51,25 @@ const outreachImg2 = document.querySelector<HTMLImageElement>('#outreachImg2');
 const outreachSubtitle = document.getElementById('outreachSubtitle');
 const outreachDesc = document.getElementById('outreachDesc');
 
-outreachButtons.forEach((button, index) => {
+outreachButtons.forEach(button => {
   button.addEventListener('click', () => {
-    const item = outreachData[index];
-    if (!item) return;
+    const { imageOne, imageTwo, subtitle, description } = button.dataset;
+    const title = button.textContent?.trim() ?? '';
     for (const other of outreachButtons) {
       other.classList.toggle('active', other === button);
       other.setAttribute('aria-pressed', String(other === button));
     }
-    if (outreachTitle) outreachTitle.textContent = item.title;
-    if (outreachImg1) {
-      outreachImg1.src = item.img1;
-      outreachImg1.alt = item.title;
+    if (outreachTitle) outreachTitle.textContent = title;
+    if (outreachImg1 && imageOne) {
+      outreachImg1.src = imageOne;
+      outreachImg1.alt = title;
     }
-    if (outreachImg2) {
-      outreachImg2.src = item.img2;
-      outreachImg2.alt = item.title;
+    if (outreachImg2 && imageTwo) {
+      outreachImg2.src = imageTwo;
+      outreachImg2.alt = title;
     }
-    if (outreachSubtitle) outreachSubtitle.textContent = item.subtitle;
-    if (outreachDesc) outreachDesc.textContent = item.desc;
+    if (outreachSubtitle) outreachSubtitle.textContent = subtitle ?? '';
+    if (outreachDesc) outreachDesc.textContent = description ?? '';
   });
 });
 

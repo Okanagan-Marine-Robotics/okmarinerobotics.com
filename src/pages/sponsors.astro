@@ -1,0 +1,76 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import { getPage, getOrdered } from '../lib/content';
+
+const page = await getPage('sponsors');
+const { copy, links } = page;
+const sponsors = await getOrdered('sponsors');
+---
+
+<SiteLayout page={page}>
+  <section class="section" style="padding-top: 50px; background: var(--bg-page);">
+    <div class="container">
+      <PageIntro intro={page.intro} />
+
+      <h2 class="sponsor-tier-title">{copy.platinumSponsors}</h2>
+      <div class="sponsors-grid" style="margin-bottom: 40px;">
+        {sponsors.filter(sponsor => sponsor.group === 'platinum').map((s) => (
+          <div class="sponsor-card">
+            <img src={s.logo} alt={s.name} loading="lazy" />
+          </div>
+        ))}
+      </div>
+
+      <h2 class="sponsor-tier-title">{copy.goldSponsors}</h2>
+      <div class="sponsors-grid" style="margin-bottom: 40px;">
+        {sponsors.filter(sponsor => sponsor.group === 'gold').map((s) => (
+          <div class="sponsor-card">
+            <img src={s.logo} alt={s.name} loading="lazy" />
+          </div>
+        ))}
+      </div>
+
+      <h2 class="sponsor-tier-title">{copy.silverSponsors}</h2>
+      <div class="sponsors-grid" style="margin-bottom: 40px;">
+        {sponsors.filter(sponsor => sponsor.group === 'silver').map((s) => (
+          <div class="sponsor-card">
+            <img src={s.logo} alt={s.name} loading="lazy" />
+          </div>
+        ))}
+      </div>
+
+      <h2 class="sponsor-tier-title">{copy.bronzeSponsors}</h2>
+      <div class="sponsors-grid" style="margin-bottom: 40px;">
+        {sponsors.filter(sponsor => sponsor.group === 'bronze').map((s) => (
+          <div class="sponsor-card">
+            <img src={s.logo} alt={s.name} loading="lazy" />
+          </div>
+        ))}
+      </div>
+
+      <h2 class="sponsor-tier-title">{copy.softwareSponsor}</h2>
+      <div class="sponsors-grid" style="margin-bottom: 50px;">
+        {sponsors.filter(sponsor => sponsor.group === 'software').map((s) => (
+          <div class="sponsor-card">
+            <img src={s.logo} alt={s.name} loading="lazy" />
+          </div>
+        ))}
+      </div>
+
+      <div class="card" style="text-align: center; max-width: 820px; margin: 0 auto; padding: 40px;">
+        <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 12px; text-transform: uppercase;">
+          {copy.interestedInPartneringWithUs}
+        </h2>
+        <p style="color: var(--text-body); max-width: 600px; margin: 0 auto 24px; font-size: 1.05rem;">
+          {copy.joinWorldClassSubseaEngineering}
+        </p>
+        <div>
+          <a href={links.sponsorships} class="btn btn-primary">
+            {copy.viewSponsorshipTierDeck}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</SiteLayout>

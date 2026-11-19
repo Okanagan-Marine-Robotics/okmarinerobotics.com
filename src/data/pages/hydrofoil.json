@@ -1,0 +1,30 @@
+{
+  "template": "standard",
+  "title": "Hydrofoil Project",
+  "copy": {
+    "hydrofoilProjectConceptAlt": "Hydrofoil project concept",
+    "nextHorizonHydrodynamicFlight": "Next Horizon: Hydrodynamic Flight",
+    "thisYearMarksTheExciting": "This year marks the exciting start of our new Hydrofoil project! Our goal is to bring a new engineering challenge to life that expands our team's diverse portfolio. Stay tuned as we design, prototype, and test for the Hydrofoil's first season on Okanagan Lake!",
+    "meetTheHydrofoilTeam": "Meet the Hydrofoil Team",
+    "getInvolved": "Get Involved",
+    "hydrodynamics": "Hydrodynamics",
+    "foilAerofoilLiftProfile": "Foil Aerofoil & Lift Profile",
+    "computationalFluidDynamicsCfdModeling": "Computational Fluid Dynamics (CFD) modeling using specialized low-Reynolds aerofoil profiles designed to optimize lift-to-drag ratio (L/D) and delay cavitation at cruising speeds.",
+    "compositeMaterials": "Composite Materials",
+    "carbonFiberConstruction": "Carbon-Fiber Construction",
+    "manufacturingVacuumInfusedCarbonFiber": "Manufacturing vacuum-infused carbon fiber composite struts and wings, delivering extreme torsional stiffness to withstand bending moments while minimizing vehicle mass.",
+    "activeControl": "Active Control",
+    "rideHeightPitchAutopilot": "Ride Height & Pitch Autopilot",
+    "integratingUltrasonicWaterClearanceSensors": "Integrating ultrasonic water-clearance sensors, IMUs, and micro-actuated trailing edge flaps to maintain stable flight altitude over varying surface waves and water chop."
+  },
+  "links": {
+    "ourTeam": "/our-team",
+    "contactUs": "/contact-us",
+    "heroImage": "/images/11C89DD6-862A-4788-BB88-BC096E_f7ef30bc84.jpeg"
+  },
+  "intro": {
+    "heading": "The Hydrofoil Project",
+    "eyebrow": "A New Endeavour",
+    "summary": "Expanding our marine engineering portfolio with high-efficiency water surface craft and active flight control."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "template": "standard",
+  "title": "Gallery",
+  "copy": {
+    "galleryPhotoLabel": "Gallery photo",
+    "closePhotoLabel": "Close photo",
+    "times": "×"
+  },
+  "intro": {
+    "heading": "Photo Gallery",
+    "eyebrow": "Visual Archive",
+    "summary": "Moments from RoboSub competitions, pool testing sessions, manufacturing, and team events."
+  }
+}

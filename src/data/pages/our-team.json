@@ -1,0 +1,24 @@
+{
+  "template": "team",
+  "title": "Our Team",
+  "intro": {
+    "eyebrow": "Team roster",
+    "heading": "Meet the team",
+    "summary": "The dedicated student engineers, computer scientists, managers, and innovators behind Okanagan Marine Robotics."
+  },
+  "details": {
+    "groups": {
+      "executives": "Executive team",
+      "management": "Management & operations",
+      "subteamLeads": "Subteam leads & specialists"
+    },
+    "memorial": {
+      "name": "Caleb Dornian",
+      "title": "In Loving Memory of Caleb Dornian",
+      "role": "Pelican Computer Case Lead",
+      "program": "BASc Electrical Engineering",
+      "img": "/images/calebdornian.avif",
+      "description": "Honoring our teammate and friend Caleb Dornian, whose dedication, kindness, and engineering ingenuity left an indelible mark on Okanagan Marine Robotics."
+    }
+  }
+}

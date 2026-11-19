@@ -1,0 +1,56 @@
+{
+  "template": "software",
+  "title": "AUV Software Architecture",
+  "copy": {
+    "softwareSubteamRoster": "Software Subteam Roster",
+    "githubRepository": "GitHub Repository",
+    "softwareDocs": "Software Docs",
+    "systemArchitecture": "System Architecture",
+    "value5TierControlHierarchy": "5-Tier Control Hierarchy",
+    "ourSoftwareStackIsOrganized": "Our software stack is organized using an industry-standard Subsea Control Hierarchy, isolating low-level hardware actuation from high-level strategic reasoning. This guarantees that individual node failures never compromise vehicle stability.",
+    "ros2SoftwareSystemArchitectureDiagramAlt": "ROS2 Software System Architecture Diagram",
+    "l5Planning": "L5 — Planning",
+    "executiveMissionLogicQualificationTask": "Executive mission logic, qualification task sequencing, and fallback behavior trees.",
+    "l4Perception": "L4 — Perception",
+    "yolov8TargetDetectionOpencvColor": "YOLOv8 target detection, OpenCV color gating, buoy identification, and bin segmentation.",
+    "l3Navigation": "L3 — Navigation",
+    "stateEstimationExtendedKalmanFilter": "State estimation, Extended Kalman Filter (EKF), IMU fusion, and waypoint trajectory planning.",
+    "l2Execution": "L2 — Execution",
+    "pidPositionVelocityLoopsAnd": "PID position/velocity loops and 8-thruster holonomic allocation matrix.",
+    "l1Hardware": "L1 — Hardware",
+    "stm32MicrocontrollerDriversSerialMicro": "STM32 microcontroller drivers, serial micro-ROS communication, and PWM generators.",
+    "computerVision": "Computer Vision",
+    "yolov8OpencvPipeline": "YOLOv8 & OpenCV Pipeline",
+    "trainedOnHundredsOfSynthetic": "Trained on hundreds of synthetic and in-pool annotated images, our deep neural networks accurately recognize underwater gates, torpedo targets, style markers, and bins despite water turbidity and shifting caustic sunlight.",
+    "opencvObjectDetectionAlt": "OpenCV Object Detection",
+    "missionLogic": "Mission Logic",
+    "behaviorTreePlanner": "Behavior Tree Planner",
+    "ourAutomatedPlanningSystemRelies": "Our automated planning system relies on reactive Behavior Trees. If a target is lost or obstructed by bubbles, the vehicle gracefully pivots into a localized search pattern before timing out and moving to the next objective.",
+    "behaviorTreeMissionPlannerAlt": "Behavior Tree Mission Planner",
+    "acousticLocalization": "Acoustic Localization",
+    "hydrophoneTdoaProcessing": "Hydrophone TDoA Processing",
+    "toLocateTheUnderwaterAcoustic": "To locate the underwater acoustic pinger, Ogopogo samples signals from an array of 4 subsea hydrophones. Phase differences are processed using cross-correlation algorithms to compute precise 3D azimuth and elevation bearings.",
+    "acousticSignalProcessingAlt": "Acoustic Signal Processing",
+    "digitalTwin": "Digital Twin",
+    "stonefishSubseaSimulation": "Stonefish Subsea Simulation",
+    "weReplicateCompetitionOceanDynamics": "We replicate competition ocean dynamics in Stonefish, simulating hydrodynamic drag, thruster fluid dynamics, synthetic camera distortion, and buoyancy imbalances to validate full mission logic before touching pool water.",
+    "stonefishSubseaSimulatorAlongsideTheAlt": "Stonefish Subsea Simulator alongside the ROS visualization window"
+  },
+  "links": {
+    "githubRepository": "https://github.com/Okanagan-Marine-Robotics/okmr_auv",
+    "softwareDocumentation": "https://docs.google.com/document/d/1PhQ2q0ED-8mXD5I1RwiWC_7xKGJy2q97WKZ9-5tj8FE/edit?tab=t.0",
+    "ros2SoftwareSystemArchitecture": "/images/f0621d_a915c38e765942c181ee2af_cccc02c609.png",
+    "opencvObjectDetection": "/images/image_bb73b7e2fb.png",
+    "behaviorTreeMissionPlanner": "/images/image_45f613065f.png",
+    "acousticSignalProcessing": "/images/image_4158e25f29.png",
+    "stonefishSubseaSimulatorAlongside": "/images/image_3f50d53243.png"
+  },
+  "intro": {
+    "heading": "AUV Software Architecture",
+    "eyebrow": "AUV Subsystems",
+    "summary": "A modular, scalable autonomy stack built on ROS2 Humble, computer vision, acoustic localization, and behavior tree planning."
+  },
+  "details": {
+    "teamRoster": "Kurt Galanto (Software Lead), Hammad Tariq, Arsh Mehta, Jia Yi Lu, Chigoziri Okpanku, Aditya Patel."
+  }
+}

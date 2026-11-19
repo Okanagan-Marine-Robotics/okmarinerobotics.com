@@ -1,0 +1,32 @@
+{
+  "template": "standard",
+  "title": "RoboSub 2025",
+  "copy": {
+    "value11th": "11th",
+    "internationallyOutOf58Teams": "Internationally out of 58 Teams",
+    "value2nd": "2nd",
+    "rankedTeamInCanada": "Ranked Team in Canada",
+    "value4th": "4th",
+    "placeTechnicalDesignPaper": "Place Technical Design Paper",
+    "placeTeamDemonstrationVideo": "Place Team Demonstration Video",
+    "okanaganMarineRoboticsAtRobosubAlt": "Okanagan Marine Robotics at RoboSub 2025",
+    "doublingOurFootprintInCalifornia": "Doubling Our Footprint in California",
+    "thisYearOurTeamDoubled": "This year, our team doubled in size as 12 members traveled with",
+    "ogopogo": "Ogopogo",
+    "backToIrvineCaliforniaFor": "back to Irvine, California for our second international competition! After days of grueling poolside diagnostics, acoustic calibration, and autonomous obstacle navigation, we significantly surpassed our rookie performance to finish 11th overall in the world.",
+    "watch4thPlaceTeamVideo": "Watch 4th-Place Team Video",
+    "readTechnicalPaperPdf": "Read Technical Paper (PDF)",
+    "officialLeaderboardStandings": "Official Leaderboard Standings"
+  },
+  "links": {
+    "teamVideo": "https://www.youtube.com/watch?v=KWicUGW2KH4&t=1s",
+    "robosub2025TechnicalPaper": "/docs/RoboSub-2025-Technical-Paper.pdf",
+    "leaderboard": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTXxXI-kv_FB-9PbUNexgPf2k1Lm8jAugNN8Tb4Z0YoCMsdRyDcnY_SyaPkbVhoJCy2HjYw2ulb67dE/pubhtml",
+    "heroImage": "/images/f0621d_18d47c691bc94a648ca5dea_bc1f719001.jpg"
+  },
+  "intro": {
+    "heading": "RoboSub 2025",
+    "eyebrow": "International Competition",
+    "summary": "Irvine, California — Competing with Ogopogo against 58 top global universities."
+  }
+}

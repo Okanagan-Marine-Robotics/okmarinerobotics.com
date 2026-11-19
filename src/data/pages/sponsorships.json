@@ -1,0 +1,63 @@
+{
+  "template": "sponsorships",
+  "title": "Sponsorship Opportunities",
+  "copy": {
+    "inquireFor": "Inquire for",
+    "defaultSponsorDescription": "Valued industry partner supporting student marine engineering and innovation.",
+    "downloadSponsorshipPackagePdf": "Download Sponsorship Package (PDF)",
+    "donateDirectlyThroughUbc": "Donate Directly Through UBC",
+    "featuredPartnerSpotlights": "Featured Partner Spotlights"
+  },
+  "links": {
+    "contactUs": "/contact-us",
+    "sponsorshipPackage": "/docs/Sponsorship-Package.pdf"
+  },
+  "intro": {
+    "heading": "Sponsorship Opportunities",
+    "eyebrow": "Partner With Us",
+    "summary": "Invest in future subsea technology leaders and put your brand on the global stage at RoboSub."
+  },
+  "details": {
+    "tiers": [
+      {
+        "name": "Platinum Tier",
+        "amount": "$5,000+",
+        "perks": [
+          "Prominent logo on AUV hull & hydrofoil wings",
+          "Featured logo on team uniforms & banners",
+          "Direct recruitment access to our 80+ engineering members",
+          "Dedicated sponsor spotlight on social media & newsletter",
+          "Invitation to private live pool demonstrations"
+        ]
+      },
+      {
+        "name": "Gold Tier",
+        "amount": "$2,500+",
+        "perks": [
+          "Medium logo on vehicle chassis & competition banners",
+          "Logo on team apparel & website footer",
+          "Direct distribution of job/internship openings",
+          "Feature in term engineering progress reports"
+        ]
+      },
+      {
+        "name": "Silver Tier",
+        "amount": "$1,000+",
+        "perks": [
+          "Logo on website sponsors page & social media recognition",
+          "Logo featured on competition presentation slide decks",
+          "Term newsletter acknowledgement"
+        ]
+      },
+      {
+        "name": "Bronze & In-Kind",
+        "amount": "$500+ / Hardware",
+        "perks": [
+          "Logo on website",
+          "Social media shoutout upon hardware delivery",
+          "Certificate of appreciation from student design team"
+        ]
+      }
+    ]
+  }
+}

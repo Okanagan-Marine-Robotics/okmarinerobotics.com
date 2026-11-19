@@ -1,0 +1,53 @@
+{
+  "template": "subsystem",
+  "title": "AUV Mechanical",
+  "intro": {
+    "heading": "AUV Mechanical Engineering",
+    "eyebrow": "AUV Subsystems",
+    "summary": "Chassis structures, pressure hulls, dynamic seals, and precision subsea manipulators."
+  },
+  "details": {
+    "teamHeading": "AUV Mechanical Subteam",
+    "teamPhotoAlt": "AUV Mechanical Subteam",
+    "teamPhoto": "/images/IMG_4649_edited_c71b766b6b.jpg",
+    "subteamMembers": "Left to right: Ryan Shaw, Dylan Leier, Lukas Schuler Desnoyers, Karan Salvadi, Allen Chen, John Mabbayad, Nate Katzer, Ryan Buch, Jaeden Rossner, Dani Mackay, Ben Muwanga, Evan Kappes. Not pictured: Abdullah Arif, Daniel Lu, Sam Bachnak, Harnoor Chugh, Jeffery Duong, Mahmoud Zaher, Matthew Ohlmann, William Kusuma, Zahidul Islam Bayzid, Ryan Adib, Tanner Knapton, Luke Kachura.",
+    "modules": [
+      {
+        "title": "Structures & Chassis Frame",
+        "badge": "Modular Aluminum Frame",
+        "img": "/images/f0621d_18349111ad044c49b1bdc8f_ad70984216.png",
+        "desc": "The revised aluminum frame reduces the number of individual members and simplifies joint geometry compared to Cascade. Utilizing precision waterjet cut 6061-T6 aluminum plates and extruded profiles, it guarantees rigidity, easy mounting points for 8 brushless thrusters, and rapid ballast adjustments."
+      },
+      {
+        "title": "Battery Enclosure",
+        "badge": "Thermal Management & Rapid Swap",
+        "img": "/images/battery_20enclosure_edited_070b163cbc.jpg",
+        "desc": "To improve thermal management and serviceability of Ogopogo, we relocated the high-capacity LiPo batteries from the central pressure hull into dedicated external subsea pods. This isolation enables 2-minute field swaps between competition qualification runs without compromising main hull seals."
+      },
+      {
+        "title": "Electronics Sliding Tray",
+        "badge": "Modular Internal Avionics",
+        "img": "/images/ElectricalTray_a6ce27f428.png",
+        "desc": "The internal electronics chassis slides out smoothly on custom laser-cut rails. Stacked acrylic plates organize the STM32 compute stack, motor speed controllers (ESCs), power regulators, and inertial sensors with dedicated wire management channels for quick diagnostic access."
+      },
+      {
+        "title": "Robotic Manipulator Arm",
+        "badge": "Subsea Manipulation",
+        "img": "/images/f0621d_bf22475d21b847c4a7fd91b_c9dede5a5d.png",
+        "desc": "A waterproof servo-driven 2-finger claw designed to grasp submerged PVC handles, open bin lids, and transport competition markers underwater. Uses high-friction textured gripper pads and compliant spring return mechanisms."
+      },
+      {
+        "title": "Pneumatic Torpedo Launchers",
+        "badge": "High-Accuracy Actuation",
+        "img": "/images/Torpedo_1dcfe8a85a.png",
+        "desc": "Dual pneumatic torpedo barrels driven by miniature CO2 regulators and solenoid valves. The hydrodynamic 3D-printed torpedoes feature spiral stabilizing fins engineered for straight flight paths through water into target slots."
+      },
+      {
+        "title": "Marker Dropper Mechanism",
+        "badge": "Gravity & Solenoid Release",
+        "img": "/images/f0621d_39cfe71c49114f888b9c0a2_8aa49ed73f.png",
+        "desc": "Independent dual-marker gravity drop system actuated by low-profile magnetic latches. Accurately drops weighted competition markers into underwater target bins upon mission planner command."
+      }
+    ]
+  }
+}
