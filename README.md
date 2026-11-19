@@ -8,6 +8,7 @@ Website **Okanagan Marine Robotics** at the University of British Columbia, Okan
 
 ### 1. Start Local Development Server
 ```bash
+npm ci
 npm run dev
 ```
 Open **[http://localhost:5173](http://localhost:5173)** in your browser.

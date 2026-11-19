@@ -264,13 +264,13 @@ export const sponsorsData = {
     {
       "name": "Cellula Robotics",
       "tier": "Platinum Sponsor",
-      "logo": "/images/1_ee45c2a35a.jpg",
+      "logo": "/images/2_55f87658a5.jpg",
       "desc": "Cellula Robotics is a leading developer of autonomous underwater vehicles (AUVs) designed for challenging subsea operations."
     },
     {
       "name": "UBC Professional Activities Fund",
       "tier": "Platinum Sponsor",
-      "logo": "/images/2_55f87658a5.jpg",
+      "logo": "/images/1_ee45c2a35a.jpg",
       "desc": "The University of British Columbia's Professional Activities Fund provides vital funding to engineers on campus."
     },
     {
@@ -284,19 +284,19 @@ export const sponsorsData = {
     {
       "name": "Blue Trail Engineering",
       "tier": "Gold Sponsor",
-      "logo": "/images/4_23d67fe648.jpg",
+      "logo": "/images/6_3c8296fba8.jpg",
       "desc": "Blue Trail Engineering develops world-class marine robotics components, thrusters, and subsea connectors."
     },
     {
       "name": "Banksia Subsea Robotics",
       "tier": "Gold Sponsor",
-      "logo": "/images/5_bb47ac5c1b.jpg",
+      "logo": "/images/4_23d67fe648.jpg",
       "desc": "Founded by Tristan Crees, Banksia navigates subsea robotics challenges as an independent consulting firm."
     },
     {
       "name": "SKYTRAC Systems Ltd.",
       "tier": "Gold Sponsor",
-      "logo": "/images/6_3c8296fba8.jpg",
+      "logo": "/images/5_bb47ac5c1b.jpg",
       "desc": "SKYTRAC Systems Ltd. is a global leader in aviation connectivity and satellite communications."
     },
     {
