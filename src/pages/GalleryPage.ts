@@ -12,7 +12,7 @@ export function renderGalleryPage(): string {
 
         <div class="gallery-grid">
           ${galleryData.map(photo => `
-            <div class="gallery-item" onclick="window.openLightbox('${photo.src}')" role="button" tabindex="0" aria-label="View photo">
+            <div class="gallery-item" data-lightbox-src="${photo.src}" role="button" tabindex="0" aria-label="View photo">
               <img src="${photo.src}" alt="${photo.alt}" loading="lazy" />
             </div>
           `).join('')}
@@ -21,9 +21,9 @@ export function renderGalleryPage(): string {
     </section>
 
     <!-- Lightbox Modal -->
-    <div class="lightbox-modal" id="lightboxModal" onclick="window.closeLightbox()">
-      <button class="lightbox-close" onclick="window.closeLightbox()" aria-label="Close Lightbox">&times;</button>
-      <img src="" alt="Enlarged view" class="lightbox-img" id="lightboxImg" onclick="event.stopPropagation()" />
+    <div class="lightbox-modal" id="lightboxModal">
+      <button class="lightbox-close" aria-label="Close Lightbox">&times;</button>
+      <img src="" alt="Enlarged view" class="lightbox-img" id="lightboxImg" />
     </div>
   `;
 }
