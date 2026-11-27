@@ -99,6 +99,17 @@ function attachEventListeners() {
     });
   });
 
+  document.querySelectorAll('a[href="#"]').forEach(link => {
+    link.addEventListener('click', (e) => e.preventDefault());
+  });
+
+  // Gallery lightbox
+  document.querySelectorAll<HTMLElement>('[data-lightbox-src]').forEach(item => {
+    item.addEventListener('click', () => openLightbox(item.dataset.lightboxSrc || ''));
+  });
+  document.getElementById('lightboxModal')?.addEventListener('click', closeLightbox);
+  document.getElementById('lightboxImg')?.addEventListener('click', (e) => e.stopPropagation());
+
   // Mobile menu
   const toggle = document.getElementById('mobileMenuBtn');
   const menu = document.getElementById('navMenu');
@@ -146,21 +157,21 @@ function attachEventListeners() {
 }
 
 // Lightbox modal helpers
-(window as any).openLightbox = (src: string) => {
+function openLightbox(src: string) {
   const modal = document.getElementById('lightboxModal');
   const img = document.getElementById('lightboxImg') as HTMLImageElement;
   if (modal && img) {
     img.src = src;
     modal.classList.add('active');
   }
-};
+}
 
-(window as any).closeLightbox = () => {
+function closeLightbox() {
   const modal = document.getElementById('lightboxModal');
   if (modal) {
     modal.classList.remove('active');
   }
-};
+}
 
 // Contact form simulation
 (window as any).handleContactSubmit = (e: Event) => {

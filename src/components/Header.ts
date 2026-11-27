@@ -6,7 +6,7 @@ export function renderHeader(currentPath: string): string {
       const isAnyChildActive = item.children.some(c => c.path === currentPath);
       return `
         <li class="nav-item has-dropdown">
-          <a href="#" class="nav-link ${isAnyChildActive ? 'active' : ''}" onclick="event.preventDefault()">
+          <a href="#" class="nav-link ${isAnyChildActive ? 'active' : ''}">
             ${item.label}
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
           </a>
